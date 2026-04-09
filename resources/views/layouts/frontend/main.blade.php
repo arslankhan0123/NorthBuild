@@ -8,7 +8,7 @@
     <meta name="description" content="">
 
     <!-- Site Title -->
-    <title>Bexon - Corporate Business HTML Template</title>
+    <title>@yield('title')</title>
 
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/assets/images/fav.png')}}">
