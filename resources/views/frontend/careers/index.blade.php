@@ -15,6 +15,15 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const header = document.querySelector(".header-area");
+        if (header) {
+            header.classList.remove("header-2");
+            header.classList.add("header-1");
+        }
+    });
+</script>
 <main id="primary" class="site-main">
     <div class="space-for-header"></div>
     <!-- start: Breadcrumb Section -->
