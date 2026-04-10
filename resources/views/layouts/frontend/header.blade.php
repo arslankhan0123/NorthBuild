@@ -236,42 +236,20 @@
                                 </li> -->
                                 <li class="has-dropdown"><a href="{{ route('services') }}">Services</a>
                                     <ul class="sub-menu  mega-menu-service">
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-1"></i>
-                                                </span> <span class="mega-menu-service-title">Business Strategy Development</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-2"></i>
-                                                </span> <span class="mega-menu-service-title">Customer Experience Solutions</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-3"></i>
-                                                </span> <span class="mega-menu-service-title">Sustainability and ESG Consulting</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-4"></i>
-                                                </span> <span class="mega-menu-service-title">Training and Development Programs</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-5"></i>
-                                                </span> <span class="mega-menu-service-title">IT Support & Maintenance</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-6"></i>
-                                                </span> <span class="mega-menu-service-title">Marketing Strategy & Campaigns</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
+                                        @foreach($header_services as $s_item)
+                                        <li> 
+                                            <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => $s_item->id]) }}"> 
+                                                <span class="mega-menu-service-icon">
+                                                    <i class="tji-service-{{ ($loop->index % 6) + 1 }}"></i>
+                                                </span> 
+                                                <span class="mega-menu-service-title">{{ $s_item->name }}</span> 
+                                                <span class="mega-menu-service-nav">
+                                                    <i class="tji-arrow-right-long"></i>
+                                                    <i class="tji-arrow-right-long"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        @endforeach
 
                                     </ul>
                                 </li>
@@ -471,42 +449,20 @@
                                 </li> -->
                                 <li class="has-dropdown"><a href="{{ route('services') }}">Services</a>
                                     <ul class="sub-menu  mega-menu-service">
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-1"></i>
-                                                </span> <span class="mega-menu-service-title">Business Strategy Development</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-2"></i>
-                                                </span> <span class="mega-menu-service-title">Customer Experience Solutions</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-3"></i>
-                                                </span> <span class="mega-menu-service-title">Sustainability and ESG Consulting</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-4"></i>
-                                                </span> <span class="mega-menu-service-title">Training and Development Programs</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-5"></i>
-                                                </span> <span class="mega-menu-service-title">IT Support & Maintenance</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
-                                                    class="mega-menu-service-icon">
-                                                    <i class="tji-service-6"></i>
-                                                </span> <span class="mega-menu-service-title">Marketing Strategy & Campaigns</span> <span
-                                                    class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
-                                                        class="tji-arrow-right-long"></i></span></a></li>
+                                        @foreach($header_services as $s_item)
+                                        <li> 
+                                            <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => $s_item->id]) }}"> 
+                                                <span class="mega-menu-service-icon">
+                                                    <i class="tji-service-{{ ($loop->index % 6) + 1 }}"></i>
+                                                </span> 
+                                                <span class="mega-menu-service-title">{{ $s_item->name }}</span> 
+                                                <span class="mega-menu-service-nav">
+                                                    <i class="tji-arrow-right-long"></i>
+                                                    <i class="tji-arrow-right-long"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        @endforeach
 
                                     </ul>
                                 </li>
