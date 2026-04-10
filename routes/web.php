@@ -3,6 +3,8 @@
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,6 +14,7 @@ Route::get('/', function () {
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 Route::group(['prefix' => '/services'], function () {
     Route::get('/', [FrontendController::class, 'services'])->name('services');
     Route::get('/details/{id}', [FrontendController::class, 'servicesDetails'])->name('services.details');
@@ -36,6 +39,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::group(['prefix' => '/contacts'], function () {
+        Route::get('/index', [AdminContactController::class, 'index'])->name('contacts.index');
+        Route::get('/show/{id}', [AdminContactController::class, 'show'])->name('contacts.show');
+        Route::get('/{id}', [AdminContactController::class, 'destroy'])->name('contacts.destroy');
+    });
 });
 
 require __DIR__.'/auth.php';
