@@ -72,7 +72,7 @@
                             <h2 class="title title-anim">{{ $service->name }}</h2>
                             <div class="blog-text">
                                 <p class="wow fadeInUp" data-wow-delay=".3s">{!! $service->long_description !!}</p>
-                                <ul class="wow fadeInUp" data-wow-delay=".3s">
+                                <!-- <ul class="wow fadeInUp" data-wow-delay=".3s">
                                     <li><span><i class="tji-check"></i></span>Personalization at Scale</li>
                                     <li><span><i class="tji-check"></i></span>Improved Customer Retention</li>
                                     <li><span><i class="tji-check"></i></span>Data-Driven Insights</li>
@@ -80,7 +80,7 @@
                                     <li><span><i class="tji-check"></i></span>Customer Retention</li>
                                     <li><span><i class="tji-check"></i></span>Support Optimization</li>
                                     <li><span><i class="tji-check"></i></span>Proactive Engagement</li>
-                                </ul>
+                                </ul> -->
                                 @if($service->galleries->count() > 0)
                                     <div class="images-wrap">
                                         <div class="row">
