@@ -177,6 +177,27 @@
                         </div>
                     </div>
 
+                    {{-- Service Highlights Section (max 3) --}}
+                    <div class="mt-4 p-4 bg-light rounded-4">
+                        <h6 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Service Highlights <small class="text-muted fw-normal">(Max 3)</small></h6>
+                        @for($i = 1; $i <= 3; $i++)
+                        <div class="faq-item mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-primary rounded-circle me-2" style="width:28px;height:28px;line-height:28px;text-align:center;">{{ sprintf('%02d', $i) }}</span>
+                                <span class="fw-semibold text-dark">Highlight {{ $i }}</span>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Title</label>
+                                <input type="text" name="highlight_title[]" class="form-control" placeholder="e.g. Increased Customer Satisfaction">
+                            </div>
+                            <div>
+                                <label class="form-label">Description</label>
+                                <textarea name="highlight_description[]" class="form-control" rows="2" placeholder="Short description..."></textarea>
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+
                     {{-- FAQ Section --}}
                     <div class="mt-4 p-4 bg-light rounded-4">
                         <div class="d-flex align-items-center justify-content-between mb-3">

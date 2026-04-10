@@ -33,4 +33,12 @@ class Service extends Model
     {
         return $this->hasMany(ServiceFaq::class);
     }
+
+    /**
+     * Get the highlights for the service (max 3).
+     */
+    public function highlights()
+    {
+        return $this->hasMany(ServiceHighlight::class)->orderBy('sort_order');
+    }
 }

@@ -29,7 +29,7 @@ class FrontendController extends Controller
 
     public function servicesDetails($id)
     {
-        $service = Service::with('galleries', 'faqs')->findOrFail($id);
+        $service = Service::with('galleries', 'faqs', 'highlights')->findOrFail($id);
         $services = Service::where('status', 'active')->latest()->get();
 
         $prevService = Service::where('status', 'active')->where('id', '<', $id)->orderBy('id', 'desc')->first();

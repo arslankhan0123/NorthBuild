@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\ServiceFaq;
 use App\Models\ServiceGallery;
+use App\Models\ServiceHighlight;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -85,6 +86,20 @@ class ServicesController extends Controller
             }
         }
 
+        // Save Highlights (max 3)
+        if ($request->filled('highlight_title')) {
+            foreach (array_slice($request->highlight_title, 0, 3) as $index => $title) {
+                if (!empty($title) && !empty($request->highlight_description[$index])) {
+                    ServiceHighlight::create([
+                        'service_id'  => $service->id,
+                        'title'       => $title,
+                        'description' => $request->highlight_description[$index],
+                        'sort_order'  => $index + 1,
+                    ]);
+                }
+            }
+        }
+
         return redirect()->route('services.index')->with('success', 'Service created successfully.');
     }
 
@@ -93,7 +108,7 @@ class ServicesController extends Controller
      */
     public function edit($id)
     {
-        $service = Service::with('galleries', 'faqs')->findOrFail($id);
+        $service = Service::with('galleries', 'faqs', 'highlights')->findOrFail($id);
         return view('admin.services.edit', compact('service'));
     }
 
@@ -154,6 +169,21 @@ class ServicesController extends Controller
                         'service_id' => $service->id,
                         'question'   => $question,
                         'answer'     => $request->faq_answer[$index],
+                    ]);
+                }
+            }
+        }
+
+        // Sync Highlights (replace all, max 3)
+        if ($request->filled('highlight_title')) {
+            $service->highlights()->delete();
+            foreach (array_slice($request->highlight_title, 0, 3) as $index => $title) {
+                if (!empty($title) && !empty($request->highlight_description[$index])) {
+                    ServiceHighlight::create([
+                        'service_id'  => $service->id,
+                        'title'       => $title,
+                        'description' => $request->highlight_description[$index],
+                        'sort_order'  => $index + 1,
                     ]);
                 }
             }

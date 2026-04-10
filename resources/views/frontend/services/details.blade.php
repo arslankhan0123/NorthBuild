@@ -107,41 +107,21 @@
                                     exceed your customers' expectations every time. We help you understand your customers
                                     deeply,
                                     optimize
-                                    their experience.</p>
+                                    their experience.</p>                                @if($service->highlights->count() > 0)
                                 <div class="details-content-box">
-                                    <div class="service-details-item wow fadeInUp" data-wow-delay=".2s">
-                                        <span class="number">01.</span>
-                                        <h6 class="title">Increased Customer <br>Satisfaction</h6>
+                                    @foreach($service->highlights as $highlight)
+                                    @php $delays = ['.2s', '.4s', '.6s']; @endphp
+                                    <div class="service-details-item wow fadeInUp" data-wow-delay="{{ $delays[$loop->index] ?? '.2s' }}">
+                                        <span class="number">{{ sprintf('%02d', $loop->iteration) }}.</span>
+                                        <h6 class="title">{{ $highlight->title }}</h6>
                                         <div class="desc">
-                                            <p>By prov consistent, personalized experience, customers are more likely to
-                                                feel valued a
-                                                satisfied, which directly.</p>
+                                            <p>{{ $highlight->description }}</p>
                                         </div>
                                     </div>
-                                    <div class="service-details-item wow fadeInUp" data-wow-delay=".4s">
-                                        <div class="service-number">
-                                            <span class="number">02.</span>
-                                            <h6 class="title">Improved Operational <br>Efficiency</h6>
-                                            <div class="desc">
-                                                <p>With our tools and strategies, your customer support teams can handle
-                                                    inquiries faster,
-                                                    while
-                                                    automated systems.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="service-details-item wow fadeInUp" data-wow-delay=".6s">
-                                        <div class="service-number">
-                                            <span class="number">03.</span>
-                                            <h6 class="title">Insights for Continuous Improvement</h6>
-                                            <div class="desc">
-                                                <p>Our data-driven approach provides team with valuable insights into
-                                                    customer behavior,
-                                                    enabling to continual.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> @if($service->faqs->count() > 0)
+                                    @endforeach
+                                </div>
+                                @endif
+                                @if($service->faqs->count() > 0)
                                     <h3 class="wow fadeInUp" data-wow-delay=".3s">Frequently asked questions</h3>
                                     <div class="accordion tj-faq style-2" id="faqOne">
                                         @foreach($service->faqs as $faq)
@@ -239,7 +219,7 @@
                             <div class="cta-content">
                                 <h2 class="title title-anim">Let’s Build Future Together.</h2>
                                 <div class="cta-btn wow fadeInUp" data-wow-delay=".6s">
-                                    <a class="tj-primary-btn btn-dark" href="contact.html">
+                                    <a class="tj-primary-btn btn-dark" href="{{ route('contact') }}">
                                         <span class="btn-text"><span>Get Started Now</span></span>
                                         <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                     </a>
