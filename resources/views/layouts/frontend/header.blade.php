@@ -5,7 +5,7 @@
         <div class="hamburger_inner">
             <div class="hamburger_top d-flex align-items-center justify-content-between">
                 <div class="hamburger_logo">
-                    <a href="index.html" class="mobile_logo">
+                    <a href="{{ route('home') }}" class="mobile_logo">
                         <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logo">
                     </a>
                 </div>
@@ -20,7 +20,7 @@
             <div class="hamburger-search-area">
                 <h5 class="hamburger-title">Search Now!</h5>
                 <div class="hamburger_search">
-                    <form method="get" action="index.html">
+                    <form method="get" action="{{ route('home') }}">
                         <button type="submit"><i class="tji-search"></i></button>
                         <input type="search" autocomplete="off" name="s" value="" placeholder="Search here...">
                     </form>
@@ -69,7 +69,7 @@
         <div class="hamburger_inner">
             <div class="hamburger_top d-flex align-items-center justify-content-between">
                 <div class="hamburger_logo">
-                    <a href="index.html" class="mobile_logo">
+                    <a href="{{ route('home') }}" class="mobile_logo">
                         <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logo">
                     </a>
                 </div>
@@ -80,7 +80,7 @@
             <div class="hamburger-search-area">
                 <h5 class="hamburger-title">Search Now!</h5>
                 <div class="hamburger_search">
-                    <form method="get" action="index.html">
+                    <form method="get" action="{{ route('home') }}">
                         <button type="submit"><i class="tji-search"></i></button>
                         <input type="search" autocomplete="off" name="s" value="" placeholder="Search here...">
                     </form>
@@ -133,7 +133,7 @@
                 <div class="header-wrapper">
                     <!-- site logo -->
                     <div class="site_logo">
-                        <a class="logo" href="index.html"><img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt=""></a>
+                        <a class="logo" href="{{ route('home') }}"><img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt=""></a>
                     </div>
 
                     <!-- navigation -->
@@ -174,7 +174,7 @@
                                                         <h6 class="mega-menu-title">Other Pages</h6>
                                                         <div class="mega-menu-list">
                                                             <a href="service.html">Services</a>
-                                                            <a href="service-details.html">Service details</a>
+                                                            <a href="{{ route('services.details', ['id' => 1]) }}">Service details</a>
                                                             <a href="portfolio.html">Portfolio</a>
                                                             <a href="portfolio-details.html">Portfolio details</a>
                                                             <a href="error.html">Error 404</a>
@@ -234,39 +234,39 @@
                                         </li>
                                     </ul>
                                 </li> -->
-                                <li class="has-dropdown"><a href="service.html">Services</a>
+                                <li class="has-dropdown"><a href="{{ route('services') }}">Services</a>
                                     <ul class="sub-menu  mega-menu-service">
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-1"></i>
                                                 </span> <span class="mega-menu-service-title">Business Strategy Development</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-2"></i>
                                                 </span> <span class="mega-menu-service-title">Customer Experience Solutions</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-3"></i>
                                                 </span> <span class="mega-menu-service-title">Sustainability and ESG Consulting</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-4"></i>
                                                 </span> <span class="mega-menu-service-title">Training and Development Programs</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-5"></i>
                                                 </span> <span class="mega-menu-service-title">IT Support & Maintenance</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-6"></i>
                                                 </span> <span class="mega-menu-service-title">Marketing Strategy & Campaigns</span> <span
@@ -368,7 +368,7 @@
                 <div class="header-wrapper">
                     <!-- site logo -->
                     <div class="site_logo">
-                        <a class="logo" href="index.html"><img src="{{asset('frontend/assets/images/logos/logo.webp')}}" alt=""></a>
+                        <a class="logo" href="{{ route('home') }}"><img src="{{asset('frontend/assets/images/logos/logo.webp')}}" alt=""></a>
                     </div>
 
                     <!-- navigation -->
@@ -409,7 +409,7 @@
                                                         <h6 class="mega-menu-title">Other Pages</h6>
                                                         <div class="mega-menu-list">
                                                             <a href="service.html">Services</a>
-                                                            <a href="service-details.html">Service details</a>
+                                                            <a href="{{ route('services.details', ['id' => 1]) }}">Service details</a>
                                                             <a href="portfolio.html">Portfolio</a>
                                                             <a href="portfolio-details.html">Portfolio details</a>
                                                             <a href="error.html">Error 404</a>
@@ -469,39 +469,39 @@
                                         </li>
                                     </ul>
                                 </li> -->
-                                <li class="has-dropdown"><a href="service.html">Services</a>
+                                <li class="has-dropdown"><a href="{{ route('services') }}">Services</a>
                                     <ul class="sub-menu  mega-menu-service">
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-1"></i>
                                                 </span> <span class="mega-menu-service-title">Business Strategy Development</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-2"></i>
                                                 </span> <span class="mega-menu-service-title">Customer Experience Solutions</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-3"></i>
                                                 </span> <span class="mega-menu-service-title">Sustainability and ESG Consulting</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-4"></i>
                                                 </span> <span class="mega-menu-service-title">Training and Development Programs</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-5"></i>
                                                 </span> <span class="mega-menu-service-title">IT Support & Maintenance</span> <span
                                                     class="mega-menu-service-nav"><i class="tji-arrow-right-long"></i><i
                                                         class="tji-arrow-right-long"></i></span></a></li>
-                                        <li> <a class="mega-menu-service-single" href="service-details.html"> <span
+                                        <li> <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => 1]) }}"> <span
                                                     class="mega-menu-service-icon">
                                                     <i class="tji-service-6"></i>
                                                 </span> <span class="mega-menu-service-title">Marketing Strategy & Campaigns</span> <span

@@ -27,7 +27,7 @@
                 <div class="col-xl-3 col-md-6">
                     <div class="footer-widget footer-col-1 wow fadeInUp" data-wow-delay=".1s">
                         <div class="footer-logo">
-                            <a href="index.html">
+                            <a href="{{ route('home') }}">
                                 <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logos">
                             </a>
                         </div>

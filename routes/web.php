@@ -11,6 +11,10 @@ Route::get('/', function () {
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+Route::group(['prefix' => '/services'], function () {
+    Route::get('/', [FrontendController::class, 'services'])->name('services');
+    Route::get('/{id}', [FrontendController::class, 'servicesDetails'])->name('services.details');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

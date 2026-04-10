@@ -20,4 +20,14 @@ class FrontendController extends Controller
     {
         return view('frontend.contact.index');
     }
+
+    public function services()
+    {
+        return view('frontend.services.index');
+    }
+
+    public function servicesDetails($id)
+    {
+        return view('frontend.services.details', compact('id'));
+    }
 }

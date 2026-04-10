@@ -36,7 +36,7 @@
                         <div class="tj-page-link">
                             <span><i class="tji-home"></i></span>
                             <span>
-                                <a href="index.html">Home</a>
+                                <a href="{{ route('home') }}">Home</a>
                             </span>
                             <span><i class="tji-arrow-right"></i></span>
                             <span>
