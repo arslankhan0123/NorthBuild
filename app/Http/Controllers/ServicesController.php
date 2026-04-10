@@ -2,9 +2,176 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\Service;
+use App\Models\ServiceGallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class ServicesController extends Controller
 {
-    //
+    /**
+     * Display a listing of the security services.
+     */
+    public function index()
+    {
+        $services = Service::latest()->get();
+        return view('admin.services.index', compact('services'));
+    }
+
+    /**
+     * Show the form for creating a new security service.
+     */
+    public function create()
+    {
+        return view('admin.services.create');
+    }
+
+    /**
+     * Store a newly created security service in storage.
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'short_description' => 'nullable|string',
+            'long_description' => 'nullable|string',
+            'feature_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'gallery_images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'status' => 'required|in:active,inactive',
+        ]);
+
+        $service = new Service();
+        $service->name = $request->name;
+        $service->slug = Str::slug($request->name);
+        $service->short_description = $request->short_description;
+        $service->long_description = $request->long_description;
+        $service->status = $request->status;
+
+        if ($request->hasFile('feature_image')) {
+            $image = $request->file('feature_image');
+            $name = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/uploads/services/feature_images');
+            $image->move($destinationPath, $name);
+            $service->feature_image = 'uploads/services/feature_images/' . $name;
+        }
+
+        $service->save();
+
+        if ($request->hasFile('gallery_images')) {
+            foreach ($request->file('gallery_images') as $image) {
+                $name = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $destinationPath = public_path('/uploads/services/galleries');
+                $image->move($destinationPath, $name);
+                
+                ServiceGallery::create([
+                    'service_id' => $service->id,
+                    'image' => 'uploads/services/galleries/' . $name,
+                ]);
+            }
+        }
+
+        return redirect()->route('services.index')->with('success', 'Service created successfully.');
+    }
+
+    /**
+     * Show the form for editing the specified security service.
+     */
+    public function edit($id)
+    {
+        $service = Service::with('galleries')->findOrFail($id);
+        return view('admin.services.edit', compact('service'));
+    }
+
+    /**
+     * Update the specified security service in storage.
+     */
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'short_description' => 'nullable|string',
+            'long_description' => 'nullable|string',
+            'feature_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'gallery_images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'status' => 'required|in:active,inactive',
+        ]);
+
+        $service = Service::findOrFail($id);
+        $service->name = $request->name;
+        $service->slug = Str::slug($request->name);
+        $service->short_description = $request->short_description;
+        $service->long_description = $request->long_description;
+        $service->status = $request->status;
+
+        if ($request->hasFile('feature_image')) {
+            // Delete old image if exists
+            if ($service->feature_image && file_exists(public_path($service->feature_image))) {
+                unlink(public_path($service->feature_image));
+            }
+            
+            $image = $request->file('feature_image');
+            $name = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/uploads/services/feature_images');
+            $image->move($destinationPath, $name);
+            $service->feature_image = 'uploads/services/feature_images/' . $name;
+        }
+
+        $service->save();
+
+        if ($request->hasFile('gallery_images')) {
+            foreach ($request->file('gallery_images') as $image) {
+                $name = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $destinationPath = public_path('/uploads/services/galleries');
+                $image->move($destinationPath, $name);
+
+                ServiceGallery::create([
+                    'service_id' => $service->id,
+                    'image' => 'uploads/services/galleries/' . $name,
+                ]);
+            }
+        }
+
+        return redirect()->route('services.index')->with('success', 'Service updated successfully.');
+    }
+
+    /**
+     * Remove the specified security service from storage.
+     */
+    public function destroy($id)
+    {
+        $service = Service::findOrFail($id);
+
+        // Delete feature image
+        if ($service->feature_image && file_exists(public_path($service->feature_image))) {
+            unlink(public_path($service->feature_image));
+        }
+
+        // Delete gallery images
+        foreach ($service->galleries as $gallery) {
+            if ($gallery->image && file_exists(public_path($gallery->image))) {
+                unlink(public_path($gallery->image));
+            }
+            $gallery->delete();
+        }
+
+        $service->delete();
+
+        return redirect()->route('services.index')->with('success', 'Service deleted successfully.');
+    }
+
+    /**
+     * Delete a single gallery image.
+     */
+    public function deleteGalleryImage($id)
+    {
+        $gallery = ServiceGallery::findOrFail($id);
+        if ($gallery->image && file_exists(public_path($gallery->image))) {
+            unlink(public_path($gallery->image));
+        }
+        $gallery->delete();
+
+        return response()->json(['success' => true]);
+    }
 }

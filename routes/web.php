@@ -14,7 +14,7 @@ Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::group(['prefix' => '/services'], function () {
     Route::get('/', [FrontendController::class, 'services'])->name('services');
-    Route::get('/{id}', [FrontendController::class, 'servicesDetails'])->name('services.details');
+    Route::get('/details/{id}', [FrontendController::class, 'servicesDetails'])->name('services.details');
 });
 
 Route::get('/dashboard', function () {
@@ -22,6 +22,16 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::group(['prefix' => '/services'], function () {
+        Route::get('/index', [ServicesController::class, 'index'])->name('services.index');
+        Route::get('/create', [ServicesController::class, 'create'])->name('services.create');
+        Route::post('/store', [ServicesController::class, 'store'])->name('services.store');
+        Route::get('/edit/{id}', [ServicesController::class, 'edit'])->name('services.edit');
+        Route::post('/update/{id}', [ServicesController::class, 'update'])->name('services.update');
+        Route::get('/destroy/{id}', [ServicesController::class, 'destroy'])->name('services.destroy');
+        Route::delete('/gallery/delete/{id}', [ServicesController::class, 'deleteGalleryImage'])->name('services.gallery.delete');
+    });
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
