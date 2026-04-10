@@ -21,7 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer('layouts.frontend.header', function ($view) {
+        $views = ['layouts.frontend.header', 'layouts.frontend.footer'];
+        View::composer($views, function ($view) {
             $view->with('header_services', Service::where('status', 'active')->get());
         });
     }
