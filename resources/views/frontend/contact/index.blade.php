@@ -22,6 +22,11 @@
             header.classList.remove("header-2");
             header.classList.add("header-1");
         }
+
+        const logo = document.querySelector(".logo img");
+        if (logo) {
+            logo.src = "{{ asset('frontend/assets/images/logos/logo.webp') }}";
+        }
     });
 </script>
 <main id="primary" class="site-main">
