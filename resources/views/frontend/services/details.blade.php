@@ -168,18 +168,28 @@
                                 <!-- previous post -->
                                 <div class="tj-nav__post previous">
                                     <div class="tj-nav-post__nav prev_post">
-                                        <a href="{{ route('services.details', ['id' => 1]) }}"><span><i
-                                                    class="tji-arrow-left"></i></span>Previous</a>
+                                        @if($prevService)
+                                            <a href="{{ route('services.details', ['id' => $prevService->id]) }}">
+                                                <span><i class="tji-arrow-left"></i></span>{{ $prevService->name }}
+                                            </a>
+                                        @else
+                                            <span class="text-muted"><i class="tji-arrow-left"></i> No Previous</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="tj-nav-post__grid">
-                                    <a href="service.html"><i class="tji-window"></i></a>
+                                    <a href="{{ route('services') }}"><i class="tji-window"></i></a>
                                 </div>
                                 <!-- next post -->
                                 <div class="tj-nav__post next">
                                     <div class="tj-nav-post__nav next_post">
-                                        <a href="{{ route('services.details', ['id' => 1]) }}">Next<span><i
-                                                    class="tji-arrow-right"></i></span></a>
+                                        @if($nextService)
+                                            <a href="{{ route('services.details', ['id' => $nextService->id]) }}">
+                                                {{ $nextService->name }}<span><i class="tji-arrow-right"></i></span>
+                                            </a>
+                                        @else
+                                            <span class="text-muted">No Next <i class="tji-arrow-right"></i></span>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

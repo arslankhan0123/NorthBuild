@@ -30,7 +30,11 @@ class FrontendController extends Controller
     public function servicesDetails($id)
     {
         $service = Service::with('galleries', 'faqs')->findOrFail($id);
-        $services = Service::latest()->get();
-        return view('frontend.services.details', compact('service', 'services'));
+        $services = Service::where('status', 'active')->latest()->get();
+
+        $prevService = Service::where('status', 'active')->where('id', '<', $id)->orderBy('id', 'desc')->first();
+        $nextService = Service::where('status', 'active')->where('id', '>', $id)->orderBy('id', 'asc')->first();
+
+        return view('frontend.services.details', compact('service', 'services', 'prevService', 'nextService'));
     }
 }
