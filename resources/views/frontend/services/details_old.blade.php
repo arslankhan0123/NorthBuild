@@ -32,9 +32,7 @@
 <main id="primary" class="site-main">
     <div class="space-for-header"></div>
     <!-- start: Breadcrumb Section -->
-
-    <!-- https://themejunction.net/html/bexon/demo/assets/images/bg/pheader-bg.webp -->
-    <section class="tj-page-header section-gap-x" data-bg-image="{{asset($service->feature_image)}}">
+    <section class="tj-page-header section-gap-x" data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/bg/pheader-bg.webp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -54,9 +52,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- https://themejunction.net/html/bexon/demo/assets/images/shape/pheader-overlay.webp -->
-        <div class="page-header-overlay" data-bg-image="{{asset($service->feature_image)}}"></div>
+        <div class="page-header-overlay" data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/shape/pheader-overlay.webp"></div>
     </section>
     <!-- end: Breadcrumb Section -->
 
@@ -67,9 +63,9 @@
                 <div class="col-lg-8">
                     <div class="post-details-wrapper">
                         <div class="blog-images wow fadeInUp" data-wow-delay=".1s">
-                            <img src="{{asset($service->feature_image)}}" alt="Images">
+                            <img src="https://themejunction.net/html/bexon/demo/assets/images/service/service-details.webp" alt="Images">
                         </div>
-                        <h2 class="title title-anim">{{ $service->name }}</h2>
+                        <h2 class="title title-anim">Transforming Customer: Tailored Solutions for Experiences.</h2>
                         <div class="blog-text">
                             <p class="wow fadeInUp" data-wow-delay=".3s">Recognize that exceptional customer experiences are at
                                 the
@@ -274,9 +270,18 @@
                         <div class="tj-sidebar-widget service-categories wow fadeInUp" data-wow-delay=".1s">
                             <h4 class="widget-title">More services</h4>
                             <ul>
-                                @foreach ($services as $service)
-                                    <li><a class="active" href="{{ route('services.details', ['id' => $service->id]) }}">{{ $service->name }}<span class="icon"><i class="tji-arrow-right"></i></span></a></li>
-                                @endforeach
+                                <li><a class="active" href="{{ route('services.details', ['id' => 1]) }}">Customer Experience<span class="icon"><i
+                                                class="tji-arrow-right"></i></span></a></li>
+                                <li><a href="{{ route('services.details', ['id' => 1]) }}">Training Programs<span class="icon"><i
+                                                class="tji-arrow-right"></i></span></a></li>
+                                <li><a href="{{ route('services.details', ['id' => 1]) }}">Business Strategy<span class="icon"><i
+                                                class="tji-arrow-right"></i></span></a></li>
+                                <li><a href="{{ route('services.details', ['id' => 1]) }}">Training Program<span class="icon"><i
+                                                class="tji-arrow-right"></i></span></a></li>
+                                <li><a href="{{ route('services.details', ['id' => 1]) }}">ESG Consulting<span class="icon"><i
+                                                class="tji-arrow-right"></i></span></a></li>
+                                <li><a href="{{ route('services.details', ['id' => 1]) }}">Development Hub<span class="icon"><i
+                                                class="tji-arrow-right"></i></span></a></li>
                             </ul>
                         </div>
                         <div class="tj-sidebar-widget widget-feature-item wow fadeInUp" data-wow-delay=".3s">

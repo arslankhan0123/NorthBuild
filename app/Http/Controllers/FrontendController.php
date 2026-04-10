@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -28,6 +29,8 @@ class FrontendController extends Controller
 
     public function servicesDetails($id)
     {
-        return view('frontend.services.details', compact('id'));
+        $service = Service::findOrFail($id);
+        $services = Service::latest()->get();
+        return view('frontend.services.details', compact('service', 'services'));
     }
 }
