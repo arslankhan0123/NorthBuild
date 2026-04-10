@@ -180,9 +180,9 @@
                             <div class="tj-sidebar-widget service-categories wow fadeInUp" data-wow-delay=".1s">
                                 <h4 class="widget-title">More services</h4>
                                 <ul>
-                                    @foreach ($services as $service)
-                                        <li><a class="active"
-                                                href="{{ route('services.details', ['id' => $service->id]) }}">{{ $service->name }}<span
+                                    @foreach ($services as $item)
+                                        <li><a class="{{ $item->id == $service->id ? 'active' : '' }}"
+                                                href="{{ route('services.details', ['id' => $item->id]) }}">{{ $item->name }}<span
                                                     class="icon"><i class="tji-arrow-right"></i></span></a></li>
                                     @endforeach
                                 </ul>
@@ -192,9 +192,9 @@
                                     <div class="feature-content">
                                         <h2 class="title">Modern</h2>
                                         <span>Home Makeover</span>
-                                        <a class="read-more feature-contact" href="tel:8321890640">
+                                        <a class="read-more feature-contact" href="tel:+14038300054">
                                             <i class="tji-phone-3"></i>
-                                            <span>+8 (321) 890-640</span>
+                                            <span>+1 (403) 830-0054</span>
                                         </a>
                                     </div>
                                     <div class="feature-images">
