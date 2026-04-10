@@ -84,8 +84,8 @@
                         </div>
                         <h3 class="contact-title">Email us</h3>
                         <ul class="contact-list">
-                            <li><a href="mailto:support@bexon.com">support@bexon.com</a></li>
-                            <li><a href="mailto:info@bexon.com">info@bexon.com</a></li>
+                            <li><a href="mailto:info@truenorthbuild.ca">info@truenorthbuild.ca</a></li>
+                            <li><a href="mailto:israr@truenorthbuild.ca">israr@truenorthbuild.ca</a></li>
                         </ul>
                     </div>
                 </div>
@@ -96,8 +96,7 @@
                         </div>
                         <h3 class="contact-title">Call us</h3>
                         <ul class="contact-list">
-                            <li><a href="tel:10095447818">+1 (009) 544-7818</a></li>
-                            <li><a href="tel:10098801810">+1 (009) 880-1810</a></li>
+                            <li><a href="tel:+14038300054"><b>Phone:</b> +1 (403) 830-0054</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,8 +107,8 @@
                         </div>
                         <h3 class="contact-title">Live chat</h3>
                         <ul class="contact-list">
-                            <li><a href="mailto:livechat@bexon.com">livechat@bexon.com</a></li>
-                            <li class="active"><a href="contact.html">Need help?</a></li>
+                            <li><a href="mailto:admin@truenorthbuild.ca">admin@truenorthbuild.ca</a></li>
+                            <li class="active"><a href="{{ route('contact') }}">Need help?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -194,7 +193,7 @@
                         <div class="cta-content">
                             <h2 class="title title-anim">Let’s Build Future Together.</h2>
                             <div class="cta-btn wow fadeInUp" data-wow-delay=".6s">
-                                <a class="tj-primary-btn btn-dark" href="contact.html">
+                                <a class="tj-primary-btn btn-dark" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Get Started Now</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
