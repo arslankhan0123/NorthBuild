@@ -71,23 +71,7 @@
                         </div>
                         <h2 class="title title-anim">{{ $service->name }}</h2>
                         <div class="blog-text">
-                            <p class="wow fadeInUp" data-wow-delay=".3s">Recognize that exceptional customer experiences are at
-                                the
-                                heart of every successful business. Our
-                                Customer Experience Solutions are crafted to help you transform every interaction your customers
-                                have
-                                with your brand into a meaningful and positive experience. We believe that understanding the
-                                customer
-                                journey and providing personalized, seamless experiences can significantly enhance customer
-                                loyalty,
-                                satisfaction, and lifetime value.Our approach to customer experience is comprehensive and
-                                data-driven.
-                            </p>
-                            <p class="wow fadeInUp" data-wow-delay=".3s">Our approach to customer experience is comprehensive
-                                and
-                                data-driven. We begin by assessing your
-                                current customer touchpoints, identifying areas for improvement, and using insights to develop
-                                strategies that meet your customers’ evolving needs. From optimizing digital platforms.</p>
+                            <p class="wow fadeInUp" data-wow-delay=".3s">{!! $service->long_description !!}</p>
                             <ul class="wow fadeInUp" data-wow-delay=".3s">
                                 <li><span><i class="tji-check"></i></span>Personalization at Scale</li>
                                 <li><span><i class="tji-check"></i></span>Improved Customer Retention</li>
