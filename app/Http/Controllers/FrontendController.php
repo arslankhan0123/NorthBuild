@@ -29,7 +29,7 @@ class FrontendController extends Controller
 
     public function servicesDetails($id)
     {
-        $service = Service::with('galleries')->findOrFail($id);
+        $service = Service::with('galleries', 'faqs')->findOrFail($id);
         $services = Service::latest()->get();
         return view('frontend.services.details', compact('service', 'services'));
     }

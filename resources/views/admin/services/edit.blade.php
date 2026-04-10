@@ -92,6 +92,32 @@
         border-radius: 12px !important;
         overflow: hidden;
     }
+
+    .faq-item {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 16px;
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    .faq-remove-btn {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background: #fef2f2;
+        border: none;
+        color: #ef4444;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 13px;
+    }
 </style>
 
 <div class="row justify-content-center">
@@ -189,6 +215,41 @@
                         </div>
                     </div>
 
+                    {{-- FAQ Section --}}
+                    <div class="mt-4 p-4 bg-light rounded-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h6 class="fw-bold mb-0"><i class="fas fa-question-circle text-primary me-2"></i>Frequently Asked Questions</h6>
+                            <button type="button" class="btn btn-sm btn-primary rounded-pill px-3" id="addFaqBtn">
+                                <i class="fas fa-plus me-1"></i> Add Question
+                            </button>
+                        </div>
+
+                        {{-- Existing FAQs --}}
+                        <div id="existingFaqContainer">
+                            @foreach($service->faqs as $faq)
+                            <div class="faq-item" id="saved-faq-{{ $faq->id }}">
+                                <button type="button" class="faq-remove-btn" onclick="deleteSavedFaq({{ $faq->id }})">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <div class="mb-2">
+                                    <label class="form-label">Question</label>
+                                    <input type="text" class="form-control" value="{{ $faq->question }}" disabled style="background:#f8f9fa;">
+                                </div>
+                                <div>
+                                    <label class="form-label">Answer</label>
+                                    <textarea class="form-control" rows="2" disabled style="background:#f8f9fa;">{{ $faq->answer }}</textarea>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+
+                        {{-- New FAQs --}}
+                        <div id="faqContainer"></div>
+                        <p class="text-muted small mb-0" id="faqEmptyMsg" {{ $service->faqs->count() > 0 ? 'style=display:none' : '' }}>
+                            <i class="fas fa-info-circle me-1"></i> Click "Add Question" to add FAQs.
+                        </p>
+                    </div>
+
                     <div class="mt-5 pt-3 border-top text-end">
                         <a href="{{ route('services.index') }}" class="btn btn-light rounded-pill px-4 me-2 fw-semibold">Cancel</a>
                         <button type="submit" class="btn btn-primary rounded-pill px-5 fw-bold shadow">
@@ -263,20 +324,60 @@
             $.ajax({
                 url: `/services/gallery/delete/${id}`,
                 type: 'DELETE',
-                data: {
-                    _token: '{{ csrf_token() }}'
-                },
+                data: { _token: '{{ csrf_token() }}' },
                 success: function(response) {
                     if (response.success) {
-                        $(`#gallery-${id}`).fadeOut(300, function() {
-                            $(this).remove();
-                        });
+                        $(`#gallery-${id}`).fadeOut(300, function() { $(this).remove(); });
                     }
                 },
-                error: function() {
-                    alert('Error deleting image. Please try again.');
-                }
+                error: function() { alert('Error deleting image. Please try again.'); }
             });
+        }
+    }
+
+    function deleteSavedFaq(id) {
+        if (confirm('Are you sure you want to delete this FAQ?')) {
+            $.ajax({
+                url: `/services/faq/delete/${id}`,
+                type: 'DELETE',
+                data: { _token: '{{ csrf_token() }}' },
+                success: function(response) {
+                    if (response.success) {
+                        $(`#saved-faq-${id}`).fadeOut(300, function() { $(this).remove(); });
+                    }
+                },
+                error: function() { alert('Error deleting FAQ. Please try again.'); }
+            });
+        }
+    }
+
+    // Dynamic new FAQ rows
+    let faqCount = 0;
+    $(document).ready(function() {
+        $('#addFaqBtn').on('click', function() {
+            faqCount++;
+            $('#faqEmptyMsg').hide();
+            const html = `
+                <div class="faq-item" id="faq-row-${faqCount}">
+                    <button type="button" class="faq-remove-btn" onclick="removeFaqRow(${faqCount})"><i class="fas fa-times"></i></button>
+                    <div class="mb-2">
+                        <label class="form-label">Question</label>
+                        <input type="text" name="faq_question[]" class="form-control" placeholder="e.g. What is included?">
+                    </div>
+                    <div>
+                        <label class="form-label">Answer</label>
+                        <textarea name="faq_answer[]" class="form-control" rows="3" placeholder="Your answer..."></textarea>
+                    </div>
+                </div>
+            `;
+            $('#faqContainer').append(html);
+        });
+    });
+
+    function removeFaqRow(id) {
+        $(`#faq-row-${id}`).remove();
+        if ($('#faqContainer .faq-item').length === 0 && $('#existingFaqContainer .faq-item').length === 0) {
+            $('#faqEmptyMsg').show();
         }
     }
 </script>

@@ -141,128 +141,27 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <h3 class="wow fadeInUp" data-wow-delay=".3s">Frequently asked questions</h3>
-                                <div class="accordion tj-faq style-2" id="faqOne">
-                                    <div class="accordion-item active wow fadeInUp" data-wow-delay=".3s">
-                                        <button class=" faq-title" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#faq-1" aria-expanded="true">What is Customer Experience (CX)
-                                            and why is it important?</button>
-                                        <div id="faq-1" class="collapse show" data-bs-parent="#faqOne">
-                                            <div class="accordion-body faq-text">
-                                                <p>Customer Experience (CX) refers to the overall impression a customer has
-                                                    of a business
-                                                    based
-                                                    on their interactions across various touchpoints—whether it’s a website
-                                                    visit, a customer
-                                                    support call, or an in-store purchase. It encompasses everything from
-                                                    ease of navigation
-                                                    and
-                                                    service quality to emotional connection and brand perception.
-                                                </p>
+                                </div> @if($service->faqs->count() > 0)
+                                    <h3 class="wow fadeInUp" data-wow-delay=".3s">Frequently asked questions</h3>
+                                    <div class="accordion tj-faq style-2" id="faqOne">
+                                        @foreach($service->faqs as $faq)
+                                            <div class="accordion-item {{ $loop->first ? 'active' : '' }} wow fadeInUp"
+                                                data-wow-delay=".3s">
+                                                <button class="faq-title {{ $loop->first ? '' : 'collapsed' }}" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faq-{{ $faq->id }}"
+                                                    aria-expanded="{{ $loop->first ? 'true' : 'false' }}">
+                                                    {{ $faq->question }}
+                                                </button>
+                                                <div id="faq-{{ $faq->id }}" class="collapse {{ $loop->first ? 'show' : '' }}"
+                                                    data-bs-parent="#faqOne">
+                                                    <div class="accordion-body faq-text">
+                                                        <p>{{ $faq->answer }}</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+                                        @endforeach
                                     </div>
-                                    <div class="accordion-item wow fadeInUp" data-wow-delay=".3s">
-                                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#faq-2" aria-expanded="false">How can your Customer Experience
-                                            Solutions
-                                            benefit?</button>
-                                        <div id="faq-2" class="collapse" data-bs-parent="#faqOne">
-                                            <div class="accordion-body faq-text">
-                                                <p>Our solutions optimize every touchpoint of the customer journey, ensuring
-                                                    seamless,
-                                                    personalized, and meaningful interactions. The benefits include improved
-                                                    customer
-                                                    satisfaction, higher retention rates, stronger brand loyalty, and
-                                                    actionable insights to
-                                                    continuously improve your customer engagement strategies. We help
-                                                    integrate these channels
-                                                    so
-                                                    customers feel valued.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item wow fadeInUp" data-wow-delay=".3s">
-                                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#faq-3" aria-expanded="false">How do you personalize the
-                                            customer
-                                            experience?</button>
-                                        <div id="faq-3" class="collapse" data-bs-parent="#faqOne">
-                                            <div class="accordion-body faq-text">
-                                                <p>Getting started is easy! Simply reach out to us through our contact form
-                                                    or give us a
-                                                    call,
-                                                    and
-                                                    we’ll schedule a consultation to discuss your project and how we can
-                                                    best assist you. Our
-                                                    team
-                                                    keeps you informed throughout the process, ensuring quality control and
-                                                    timely delivery.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item wow fadeInUp" data-wow-delay=".3s">
-                                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#faq-4" aria-expanded="false">What kind of tools do you use to
-                                            improve
-                                            customer experience?</button>
-                                        <div id="faq-4" class="collapse" data-bs-parent="#faqOne">
-                                            <div class="accordion-body faq-text">
-                                                <p>Getting started is easy! Simply reach out to us through our contact form
-                                                    or give us a
-                                                    call,
-                                                    and
-                                                    we’ll schedule a consultation to discuss your project and how we can
-                                                    best assist you. Our
-                                                    team
-                                                    keeps you informed throughout the process, ensuring quality control and
-                                                    timely delivery.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item wow fadeInUp" data-wow-delay=".3s">
-                                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#faq-5" aria-expanded="false">How do you collect customer
-                                            feedback?</button>
-                                        <div id="faq-5" class="collapse" data-bs-parent="#faqOne">
-                                            <div class="accordion-body faq-text">
-                                                <p>Getting started is easy! Simply reach out to us through our contact form
-                                                    or give us a
-                                                    call,
-                                                    and
-                                                    we’ll schedule a consultation to discuss your project and how we can
-                                                    best assist you. Our
-                                                    team
-                                                    keeps you informed throughout the process, ensuring quality control and
-                                                    timely delivery.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item wow fadeInUp" data-wow-delay=".3s">
-                                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#faq-6" aria-expanded="false">Can you help improve our customer
-                                            support
-                                            system?</button>
-                                        <div id="faq-6" class="collapse" data-bs-parent="#faqOne">
-                                            <div class="accordion-body faq-text">
-                                                <p>Getting started is easy! Simply reach out to us through our contact form
-                                                    or give us a
-                                                    call,
-                                                    and
-                                                    we’ll schedule a consultation to discuss your project and how we can
-                                                    best assist you. Our
-                                                    team
-                                                    keeps you informed throughout the process, ensuring quality control and
-                                                    timely delivery.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endif
 
                             </div>
                             <div class="tj-post__navigation mb-0 wow fadeInUp" data-wow-delay=".3s">

@@ -28,8 +28,9 @@ Route::middleware('auth')->group(function () {
         Route::post('/store', [ServicesController::class, 'store'])->name('services.store');
         Route::get('/edit/{id}', [ServicesController::class, 'edit'])->name('services.edit');
         Route::post('/update/{id}', [ServicesController::class, 'update'])->name('services.update');
-        Route::get('/destroy/{id}', [ServicesController::class, 'destroy'])->name('services.destroy');
+        Route::delete('/destroy/{id}', [ServicesController::class, 'destroy'])->name('services.destroy');
         Route::delete('/gallery/delete/{id}', [ServicesController::class, 'deleteGalleryImage'])->name('services.gallery.delete');
+        Route::delete('/faq/delete/{id}', [ServicesController::class, 'deleteFaq'])->name('services.faq.delete');
     });
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

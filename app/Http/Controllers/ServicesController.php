@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
+use App\Models\ServiceFaq;
 use App\Models\ServiceGallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -64,11 +65,23 @@ class ServicesController extends Controller
                 $name = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
                 $destinationPath = public_path('/uploads/services/galleries');
                 $image->move($destinationPath, $name);
-                
                 ServiceGallery::create([
                     'service_id' => $service->id,
                     'image' => 'uploads/services/galleries/' . $name,
                 ]);
+            }
+        }
+
+        // Save FAQs
+        if ($request->filled('faq_question')) {
+            foreach ($request->faq_question as $index => $question) {
+                if (!empty($question) && !empty($request->faq_answer[$index])) {
+                    ServiceFaq::create([
+                        'service_id' => $service->id,
+                        'question'   => $question,
+                        'answer'     => $request->faq_answer[$index],
+                    ]);
+                }
             }
         }
 
@@ -80,7 +93,7 @@ class ServicesController extends Controller
      */
     public function edit($id)
     {
-        $service = Service::with('galleries')->findOrFail($id);
+        $service = Service::with('galleries', 'faqs')->findOrFail($id);
         return view('admin.services.edit', compact('service'));
     }
 
@@ -133,6 +146,19 @@ class ServicesController extends Controller
             }
         }
 
+        // Save new FAQs (add only; deletion handled via AJAX)
+        if ($request->filled('faq_question')) {
+            foreach ($request->faq_question as $index => $question) {
+                if (!empty($question) && !empty($request->faq_answer[$index])) {
+                    ServiceFaq::create([
+                        'service_id' => $service->id,
+                        'question'   => $question,
+                        'answer'     => $request->faq_answer[$index],
+                    ]);
+                }
+            }
+        }
+
         return redirect()->route('services.index')->with('success', 'Service updated successfully.');
     }
 
@@ -171,6 +197,17 @@ class ServicesController extends Controller
             unlink(public_path($gallery->image));
         }
         $gallery->delete();
+
+        return response()->json(['success' => true]);
+    }
+
+    /**
+     * Delete a single FAQ.
+     */
+    public function deleteFaq($id)
+    {
+        $faq = ServiceFaq::findOrFail($id);
+        $faq->delete();
 
         return response()->json(['success' => true]);
     }
