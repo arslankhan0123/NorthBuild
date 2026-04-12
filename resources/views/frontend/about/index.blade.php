@@ -67,10 +67,11 @@
                             Best</span>
                         <div class="heading-wrap-content">
                             <div class="sec-heading">
-                                <h2 class="sec-title title-anim">Empowering Business with <span>Expertise.</span></h2>
+                                <h2 class="sec-title title-anim">Trusted Outdoor Construction <span>Services.</span></h2>
+                                <!-- <p>At North Build, we make it easy for you to choose reliable and professional outdoor services that fit your needs perfectly. Whether it’s landscaping, construction, or maintenance, our team ensures high-quality results with attention to detail and long-term durability.</p> -->
                             </div>
                             <div class="btn-wrap wow fadeInUp" data-wow-delay=".6s">
-                                <a class="tj-primary-btn" href="contact.html">
+                                <a class="tj-primary-btn" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Request a Call</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
@@ -86,10 +87,8 @@
                             <div class="choose-icon">
                                 <i class="tji-innovative"></i>
                             </div>
-                            <h4 class="title">Innovative Solutions</h4>
-                            <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to
-                                keep
-                                you competitive in a marketplace.</p>
+                            <h4 class="title">Professional Quality Work</h4>
+                            <p class="desc">We deliver high-standard workmanship in every project, ensuring strong, durable, and visually appealing results. Our team focuses on precision, detail, and long-lasting performance for complete customer satisfaction.</p>
                         </div>
                     </div>
                 </div>
@@ -99,10 +98,8 @@
                             <div class="choose-icon">
                                 <i class="tji-award"></i>
                             </div>
-                            <h4 class="title">Award-Winning Expertise</h4>
-                            <p class="desc">Recognized by industry leaders, our award-winning team has a proven record of
-                                delivering
-                                excellence across projects.</p>
+                            <h4 class="title">Reliable & On-Time Service</h4>
+                            <p class="desc">We value your time and ensure every project is completed on schedule without compromising quality. Our team is dedicated to providing fast, efficient, and dependable services you can trust.</p>
                         </div>
                     </div>
                 </div>
@@ -112,9 +109,8 @@
                             <div class="choose-icon">
                                 <i class="tji-support"></i>
                             </div>
-                            <h4 class="title">Dedicated Support</h4>
-                            <p class="desc">Our team is always available to address your concerns, providing quick and effective
-                                solution to keep your business.</p>
+                            <h4 class="title">Complete Outdoor Solutions</h4>
+                            <p class="desc">From landscaping to construction and seasonal maintenance, we offer all-in-one outdoor services. This makes it easier for you to manage your property with one trusted company.</p>
                         </div>
                     </div>
                 </div>
@@ -189,7 +185,7 @@
                         </div>
                     </div>
                     <div class="about-btn-area wow fadeInUp" data-wow-delay=".6s">
-                        <a class="tj-primary-btn" href="about.html">
+                        <a class="tj-primary-btn" href="{{ route('about') }}">
                             <span class="btn-text"><span>Learn More About Us</span></span>
                             <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                         </a>
@@ -406,7 +402,7 @@
                             </div>
                         </div>
                         <div class="team-content">
-                            <h4 class="title"><a href="team-details.html">Eade Marren</a></h4>
+                            <h4 class="title"><a href="#">Eade Marren</a></h4>
                             <span class="designation">Chief Executive</span>
                             <a class="mail-at" href="mailto:info@bexon.com"><i class="tji-at"></i></a>
                         </div>
@@ -434,7 +430,7 @@
                             </div>
                         </div>
                         <div class="team-content">
-                            <h4 class="title"><a href="team-details.html">Savannah Ngueen</a></h4>
+                            <h4 class="title"><a href="#">Savannah Ngueen</a></h4>
                             <span class="designation">Operations Head</span>
                             <a class="mail-at" href="mailto:info@bexon.com"><i class="tji-at"></i></a>
                         </div>
@@ -462,7 +458,7 @@
                             </div>
                         </div>
                         <div class="team-content">
-                            <h4 class="title"><a href="team-details.html">Kristin Watson</a></h4>
+                            <h4 class="title"><a href="#">Kristin Watson</a></h4>
                             <span class="designation">Marketing Lead</span>
                             <a class="mail-at" href="mailto:info@bexon.com"><i class="tji-at"></i></a>
                         </div>
@@ -490,7 +486,7 @@
                             </div>
                         </div>
                         <div class="team-content">
-                            <h4 class="title"><a href="team-details.html">Darlene Robertson</a></h4>
+                            <h4 class="title"><a href="#">Darlene Robertson</a></h4>
                             <span class="designation">Business Director</span>
                             <a class="mail-at" href="mailto:info@bexon.com"><i class="tji-at"></i></a>
                         </div>
@@ -523,7 +519,7 @@
                             technologies and <br> strategies
                             to competitive</p>
                         <div class="wow fadeInUp" data-wow-delay=".8s">
-                            <a class="tj-primary-btn" href="contact.html">
+                            <a class="tj-primary-btn" href="{{ route('contact') }}">
                                 <span class="btn-text"><span>Request a Call</span></span>
                                 <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>
@@ -608,7 +604,7 @@
                         <div class="cta-content">
                             <h2 class="title title-anim">Let’s Build Future Together.</h2>
                             <div class="cta-btn wow fadeInUp" data-wow-delay=".6s">
-                                <a class="tj-primary-btn btn-dark" href="contact.html">
+                                <a class="tj-primary-btn btn-dark" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Get Started Now</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
