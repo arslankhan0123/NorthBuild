@@ -113,6 +113,13 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle arrow-none" href="{{route('careers.index')}}" id="topnav-careers" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="icon nav-icon" data-feather="users"></i>
+                                <span data-key="t-careers">Careers</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle arrow-none" href="{{route('contacts.index')}}" id="topnav-contacts" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="icon nav-icon" data-feather="mail"></i>
