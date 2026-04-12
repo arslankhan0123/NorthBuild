@@ -162,32 +162,29 @@
                         <div class="sec-heading">
                             <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>Get to Know
                                 Us</span>
-                            <h2 class="sec-title title-anim">Driving Innovation and Excellence for Sustainable Corporate Success
+                            <!-- <h2 class="sec-title title-anim">Driving Innovation and Excellence for Sustainable Corporate Success
                                 <span>Worldwide.</span>
-                            </h2>
+                            </h2> -->
+                            <p>At North Build, we take pride in delivering reliable outdoor construction, landscaping, and property maintenance services that enhance the beauty, safety, and value of every project we handle.</p>
                         </div>
                     </div>
                     <div class="about-bottom-area">
                         <div class="mission-vision-box wow fadeInLeft" data-wow-delay=".5s">
                             <h4 class="title">Our Mission</h4>
-                            <p class="desc">our mission is empower businesses through innovate best solution, exceptional
-                                service.
-                            </p>
+                            <p class="desc">Our mission is to provide high-quality, dependable, and affordable outdoor services that improve residential and commercial properties.</p>
                             <ul class="list-items">
-                                <li><i class="tji-list"></i>Innovation & Excellence</li>
-                                <li><i class="tji-list"></i>Exceptional Customer</li>
-                                <li><i class="tji-list"></i>Business Growth</li>
+                                <li><i class="tji-list"></i>Deliver reliable and high-quality services on every project</li>
+                                <li><i class="tji-list"></i>Ensure customer satisfaction through professional workmanship</li>
+                                <li><i class="tji-list"></i>Use modern tools and efficient techniques for better results</li>
                             </ul>
                         </div>
                         <div class="mission-vision-box wow fadeInRight" data-wow-delay=".5s">
                             <h4 class="title">Our Vision</h4>
-                            <p class="desc">Our vision is to become a global leader in providing transformative business
-                                solutions.
-                            </p>
+                            <p class="desc">Our vision is to become a trusted and leading name in outdoor construction and landscaping services by continuously improving our quality.</p>
                             <ul class="list-items">
-                                <li><i class="tji-list"></i>Global Leadership</li>
-                                <li><i class="tji-list"></i>Transformative Impact</li>
-                                <li><i class="tji-list"></i>Sustainable Success</li>
+                                <li><i class="tji-list"></i>Become a trusted leader in landscaping and construction services</li>
+                                <li><i class="tji-list"></i>Deliver excellence in every residential and commercial project</li>
+                                <li><i class="tji-list"></i>Expand services with innovation and modern techniques</li>
                             </ul>
                         </div>
                     </div>
