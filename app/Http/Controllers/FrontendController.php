@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\Career;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function careers()
     {
-        return view('frontend.careers.index');
+        $careers = Career::where('status', 'active')->latest()->get();
+        return view('frontend.careers.index', compact('careers'));
+    }
+
+    public function careerDetails($slug)
+    {
+        $career = Career::where('slug', $slug)->firstOrFail();
+        return view('frontend.careers.details', compact('career'));
     }
 
     public function about()
@@ -29,8 +37,12 @@ class FrontendController extends Controller
 
     public function servicesDetails($id)
     {
-        $service = Service::with('galleries')->findOrFail($id);
-        $services = Service::latest()->get();
-        return view('frontend.services.details', compact('service', 'services'));
+        $service = Service::with('galleries', 'faqs', 'highlights')->findOrFail($id);
+        $services = Service::where('status', 'active')->latest()->get();
+
+        $prevService = Service::where('status', 'active')->where('id', '<', $id)->orderBy('id', 'desc')->first();
+        $nextService = Service::where('status', 'active')->where('id', '>', $id)->orderBy('id', 'asc')->first();
+
+        return view('frontend.services.details', compact('service', 'services', 'prevService', 'nextService'));
     }
 }

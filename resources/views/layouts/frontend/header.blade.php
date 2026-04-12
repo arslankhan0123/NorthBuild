@@ -1,3 +1,31 @@
+<style>
+    @media (min-width: 992px) {
+        .mega-menu-service {
+            max-height: 450px !important;
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+        }
+
+        /* Custom Scrollbar for the dropdown */
+        .mega-menu-service::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .mega-menu-service::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .mega-menu-service::-webkit-scrollbar-thumb {
+            background: #7c3aed;
+            border-radius: 10px;
+        }
+
+        .mega-menu-service::-webkit-scrollbar-thumb:hover {
+            background: #6d28d9;
+        }
+    }
+</style>
 <!-- start: Offcanvas Menu -->
 <div class="tj-offcanvas-area d-none d-lg-block">
     <div class="hamburger_bg"></div>
@@ -140,8 +168,8 @@
                     <div class="menu-area d-none d-lg-inline-flex align-items-center">
                         <nav id="mobile-menu" class="mainmenu">
                             <ul>
-                                <li class="current-menu-ancestor"><a href="{{ route('home') }}">Home</a></li>
-                                <li><a href="{{ route('about') }}">About</a></li>
+                                <li class="{{ request()->routeIs('home') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                                <li class="{{ request()->routeIs('about') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('about') }}">About</a></li>
                                 <!-- <li class="has-dropdown"><a href="about.html">Pages</a>
                                     <ul class="sub-menu header__mega-menu mega-menu mega-menu-pages">
                                         <li>
@@ -234,7 +262,7 @@
                                         </li>
                                     </ul>
                                 </li> -->
-                                <li class="has-dropdown"><a href="{{ route('services') }}">Services</a>
+                                <li class="has-dropdown {{ request()->is('services*') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('services') }}">Services</a>
                                     <ul class="sub-menu  mega-menu-service">
                                         @foreach($header_services as $s_item)
                                         <li> 
@@ -267,8 +295,8 @@
                                         <li><a href="blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="{{ route('careers') }}">Careers</a></li>
-                                <li><a href="{{ route('contact') }}">Contact</a></li>
+                                <li class="{{ request()->routeIs('careers') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('careers') }}">Careers</a></li>
+                                <li class="{{ request()->routeIs('contact') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -289,7 +317,7 @@
                             </button>
                         </div>
                         <div class="header-button">
-                            <a class="tj-primary-btn" href="contact.html">
+                            <a class="tj-primary-btn" href="{{ route('contact') }}">
                                 <span class="btn-text"><span>Let’s Talk</span></span>
                                 <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>
@@ -353,8 +381,8 @@
                     <div class="menu-area d-none d-lg-inline-flex align-items-center">
                         <nav class="mainmenu">
                             <ul>
-                                <li class="current-menu-ancestor"><a href="{{ route('home') }}">Home</a></li>
-                                <li><a href="{{ route('about') }}">About</a></li>
+                                <li class="{{ request()->routeIs('home') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                                <li class="{{ request()->routeIs('about') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('about') }}">About</a></li>
                                 <!-- <li class="has-dropdown"><a href="about.html">Pages</a>
                                     <ul class="sub-menu header__mega-menu mega-menu mega-menu-pages">
                                         <li>
@@ -447,7 +475,7 @@
                                         </li>
                                     </ul>
                                 </li> -->
-                                <li class="has-dropdown"><a href="{{ route('services') }}">Services</a>
+                                <li class="has-dropdown {{ request()->is('services*') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('services') }}">Services</a>
                                     <ul class="sub-menu  mega-menu-service">
                                         @foreach($header_services as $s_item)
                                         <li> 
@@ -480,8 +508,8 @@
                                         <li><a href="blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="{{ route('careers') }}">Careers</a></li>
-                                <li><a href="{{ route('contact') }}">Contact</a></li>
+                                <li class="{{ request()->routeIs('careers') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('careers') }}">Careers</a></li>
+                                <li class="{{ request()->routeIs('contact') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -502,7 +530,7 @@
                             </button>
                         </div>
                         <div class="header-button">
-                            <a class="tj-primary-btn" href="contact.html">
+                            <a class="tj-primary-btn" href="{{ route('contact') }}">
                                 <span class="btn-text"><span>Let’s Talk</span></span>
                                 <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>

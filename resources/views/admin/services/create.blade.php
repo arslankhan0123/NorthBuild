@@ -81,6 +81,32 @@
         border-radius: 12px !important;
         overflow: hidden;
     }
+
+    .faq-item {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 16px;
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    .faq-remove-btn {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background: #fef2f2;
+        border: none;
+        color: #ef4444;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 13px;
+    }
 </style>
 
 <div class="row justify-content-center">
@@ -151,6 +177,41 @@
                         </div>
                     </div>
 
+                    {{-- Service Highlights Section (max 3) --}}
+                    <div class="mt-4 p-4 bg-light rounded-4">
+                        <h6 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>Service Highlights <small class="text-muted fw-normal">(Max 3)</small></h6>
+                        @for($i = 1; $i <= 3; $i++)
+                        <div class="faq-item mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-primary rounded-circle me-2" style="width:28px;height:28px;line-height:28px;text-align:center;">{{ sprintf('%02d', $i) }}</span>
+                                <span class="fw-semibold text-dark">Highlight {{ $i }}</span>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Title</label>
+                                <input type="text" name="highlight_title[]" class="form-control" placeholder="e.g. Increased Customer Satisfaction">
+                            </div>
+                            <div>
+                                <label class="form-label">Description</label>
+                                <textarea name="highlight_description[]" class="form-control" rows="2" placeholder="Short description..."></textarea>
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+
+                    {{-- FAQ Section --}}
+                    <div class="mt-4 p-4 bg-light rounded-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h6 class="fw-bold mb-0"><i class="fas fa-question-circle text-primary me-2"></i>Frequently Asked Questions</h6>
+                            <button type="button" class="btn btn-sm btn-primary rounded-pill px-3" id="addFaqBtn">
+                                <i class="fas fa-plus me-1"></i> Add Question
+                            </button>
+                        </div>
+                        <div id="faqContainer">
+                            {{-- FAQ items will be added here --}}
+                        </div>
+                        <p class="text-muted small mb-0" id="faqEmptyMsg"><i class="fas fa-info-circle me-1"></i> Click "Add Question" to add FAQs for this service.</p>
+                    </div>
+
                     <div class="mt-5 pt-3 border-top text-end">
                         <a href="{{ route('services.index') }}" class="btn btn-light rounded-pill px-4 me-2 fw-semibold">Cancel</a>
                         <button type="submit" class="btn btn-primary rounded-pill px-5 fw-bold shadow">
@@ -218,6 +279,34 @@
                 });
             }
         });
+
+        // Dynamic FAQ
+        let faqCount = 0;
+        $('#addFaqBtn').on('click', function() {
+            faqCount++;
+            $('#faqEmptyMsg').hide();
+            const html = `
+                <div class="faq-item" id="faq-row-${faqCount}">
+                    <button type="button" class="faq-remove-btn" onclick="removeFaqRow(${faqCount})"><i class="fas fa-times"></i></button>
+                    <div class="mb-2">
+                        <label class="form-label">Question</label>
+                        <input type="text" name="faq_question[]" class="form-control" placeholder="e.g. What is included in this service?">
+                    </div>
+                    <div>
+                        <label class="form-label">Answer</label>
+                        <textarea name="faq_answer[]" class="form-control" rows="3" placeholder="Your detailed answer..."></textarea>
+                    </div>
+                </div>
+            `;
+            $('#faqContainer').append(html);
+        });
     });
+
+    function removeFaqRow(id) {
+        $('#faq-row-' + id).remove();
+        if ($('#faqContainer .faq-item').length === 0) {
+            $('#faqEmptyMsg').show();
+        }
+    }
 </script>
 @endsection

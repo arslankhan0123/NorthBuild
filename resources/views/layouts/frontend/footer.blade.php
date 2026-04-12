@@ -49,12 +49,14 @@
                     <div class="footer-widget footer-col-2 widget-nav-menu wow fadeInUp" data-wow-delay=".3s">
                         <h5 class="title">Services</h5>
                         <ul>
-                            <li><a href="#">Customer Experience</a></li>
-                            <li><a href="#">Training Programs</a></li>
-                            <li><a href="#">Business Strategy</a></li>
-                            <li><a href="#">Training Program</a></li>
-                            <li><a href="#">ESG Consulting</a></li>
-                            <li><a href="#">Development Hub</a></li>
+                            @foreach($header_services as $fs)
+                            <li>
+                                <a href="{{ route('services.details', ['id' => $fs->id]) }}"
+                                   style="display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;">
+                                    {{ $fs->name }}
+                                </a>
+                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -62,12 +64,11 @@
                     <div class="footer-widget footer-col-3 widget-nav-menu wow fadeInUp" data-wow-delay=".5s">
                         <h5 class="title">Resources</h5>
                         <ul>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Team Member</a></li>
-                            <li><a href="#">Recognitions</a></li>
-                            <li><a href="careers.html">Careers <span class="badge">New</span></a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Feedback</a></li>
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="{{ route('services') }}">Services</a></li>
+                            <li><a href="{{ route('about') }}">About Us</a></li>
+                            <li><a href="{{ route('careers') }}">Careers</a></li>
+                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,8 +80,8 @@
                                 <span>993 Renner Burg, West Rond, MT 94251-030, USA.</span>
                             </div>
                             <div class="contact-item">
-                                <a href="tel:10095447818">P: +1 (009) 544-7818</a>
-                                <a href="mailto:support@bexon.com">M: support@bexon.com</a>
+                                <a href="tel:+14038300054">P: +1 (403) 830-0054</a>
+                                <a href="mailto:info@truenorthbuild.ca">M: info@truenorthbuild.ca</a>
                             </div>
                             <div class="contact-item">
                                 <span><i class="tji-clock"></i> Mon-Fri 10am-10pm</span>
@@ -139,8 +140,8 @@
                 <div class="col-12">
                     <div class="copyright-content-area">
                         <div class="copyright-text">
-                            <p>&copy; <span>2026</span> <a href="https://themeforest.net/user/theme-junction/portfolio"
-                                    target="_blank">Bexon</a> All right reserved</p>
+                            <p>&copy; <span>2026</span> <a href="{{ route('home') }}"
+                                    target="_blank">The North Build</a> All right reserved</p>
                         </div>
                         <div class="social-links style-3">
                             <ul>
@@ -158,8 +159,8 @@
                         </div>
                         <div class="copyright-menu">
                             <ul>
-                                <li><a href="contact.html">Privacy Policy</a></li>
-                                <li><a href="contact.html">Terms & Condition</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
                             </ul>
                         </div>
                     </div>

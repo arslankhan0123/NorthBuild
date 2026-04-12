@@ -25,4 +25,20 @@ class Service extends Model
     {
         return $this->hasMany(ServiceGallery::class);
     }
+
+    /**
+     * Get the FAQs for the service.
+     */
+    public function faqs()
+    {
+        return $this->hasMany(ServiceFaq::class);
+    }
+
+    /**
+     * Get the highlights for the service (max 3).
+     */
+    public function highlights()
+    {
+        return $this->hasMany(ServiceHighlight::class)->orderBy('sort_order');
+    }
 }

@@ -2,19 +2,7 @@
 @section('title', 'Contact Us')
 
 @section('content')
-@if(session('success'))
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-    <i class="fas fa-check-circle me-2"></i> {{ session('success') }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-@endif
 
-@if(session('error'))
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <i class="fas fa-exclamation-circle me-2"></i> {{ session('error') }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-@endif
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const header = document.querySelector(".header-area");
@@ -59,6 +47,31 @@
     <!-- start: Contact Top Section -->
     <div class="tj-contact-area section-gap">
         <div class="container">
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show mb-5 p-4 border-0 shadow-sm" role="alert" style="border-radius: 15px; background-color: #d1e7dd; color: #0f5132;">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle me-3 fa-2x"></i>
+                        <div>
+                            <h5 class="alert-heading mb-1 fw-bold">Success!</h5>
+                            <p class="mb-0">{{ session('success') }}</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
+            @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show mb-5 p-4 border-0 shadow-sm" role="alert" style="border-radius: 15px;">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-exclamation-circle me-3 fa-2x"></i>
+                        <div>
+                            <h5 class="alert-heading mb-1 fw-bold">Error!</h5>
+                            <p class="mb-0">{{ session('error') }}</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="row">
                 <div class="col-12">
                     <div class="sec-heading text-center">
@@ -84,8 +97,8 @@
                         </div>
                         <h3 class="contact-title">Email us</h3>
                         <ul class="contact-list">
-                            <li><a href="mailto:support@bexon.com">support@bexon.com</a></li>
-                            <li><a href="mailto:info@bexon.com">info@bexon.com</a></li>
+                            <li><a href="mailto:info@truenorthbuild.ca">info@truenorthbuild.ca</a></li>
+                            <li><a href="mailto:israr@truenorthbuild.ca">israr@truenorthbuild.ca</a></li>
                         </ul>
                     </div>
                 </div>
@@ -96,8 +109,7 @@
                         </div>
                         <h3 class="contact-title">Call us</h3>
                         <ul class="contact-list">
-                            <li><a href="tel:10095447818">+1 (009) 544-7818</a></li>
-                            <li><a href="tel:10098801810">+1 (009) 880-1810</a></li>
+                            <li><a href="tel:+14038300054"><b>Phone:</b> +1 (403) 830-0054</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,8 +120,8 @@
                         </div>
                         <h3 class="contact-title">Live chat</h3>
                         <ul class="contact-list">
-                            <li><a href="mailto:livechat@bexon.com">livechat@bexon.com</a></li>
-                            <li class="active"><a href="contact.html">Need help?</a></li>
+                            <li><a href="mailto:admin@truenorthbuild.ca">admin@truenorthbuild.ca</a></li>
+                            <li class="active"><a href="{{ route('contact') }}">Need help?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -125,21 +137,25 @@
                 <div class="col-lg-6">
                     <div class="contact-form wow fadeInUp" data-wow-delay=".1s">
                         <h3 class="title">Feel Free to Get in Touch or Visit our Location.</h3>
-                        <form id="contact-form">
+                        <form id="contact-form" action="{{ route('contact.store') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-input">
-                                        <input type="text" name="conName" placeholder="Full Name*" required>
+                                        <input type="text" name="conName" placeholder="Full Name*" value="{{ old('conName') }}" required>
+                                        @error('conName') <small class="text-danger">{{ $message }}</small> @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-input">
-                                        <input type="email" name="conEmail" placeholder="Email Address*" required>
+                                        <input type="email" name="conEmail" placeholder="Email Address*" value="{{ old('conEmail') }}" required>
+                                        @error('conEmail') <small class="text-danger">{{ $message }}</small> @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-input">
-                                        <input type="tel" name="conPhone" placeholder="Phone number*" required>
+                                        <input type="tel" name="conPhone" placeholder="Phone number*" value="{{ old('conPhone') }}" required>
+                                        @error('conPhone') <small class="text-danger">{{ $message }}</small> @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -148,20 +164,22 @@
                                             <div class="tj-select">
                                                 <select name="conSubject">
                                                     <option value="">Chose a option</option>
-                                                    <option value="Business Strategy">Business Strategy</option>
-                                                    <option value="Customer Experience">Customer Experience</option>
-                                                    <option value="Sustainability and ESG">Sustainability and ESG</option>
-                                                    <option value="Training and Development">Training and Development</option>
-                                                    <option value="IT Support & Maintenance">IT Support & Maintenance</option>
-                                                    <option value="Marketing Strategy">Marketing Strategy</option>
+                                                    <option value="Business Strategy" {{ old('conSubject') == 'Business Strategy' ? 'selected' : '' }}>Business Strategy</option>
+                                                    <option value="Customer Experience" {{ old('conSubject') == 'Customer Experience' ? 'selected' : '' }}>Customer Experience</option>
+                                                    <option value="Sustainability and ESG" {{ old('conSubject') == 'Sustainability and ESG' ? 'selected' : '' }}>Sustainability and ESG</option>
+                                                    <option value="Training and Development" {{ old('conSubject') == 'Training and Development' ? 'selected' : '' }}>Training and Development</option>
+                                                    <option value="IT Support & Maintenance" {{ old('conSubject') == 'IT Support & Maintenance' ? 'selected' : '' }}>IT Support & Maintenance</option>
+                                                    <option value="Marketing Strategy" {{ old('conSubject') == 'Marketing Strategy' ? 'selected' : '' }}>Marketing Strategy</option>
                                                 </select>
+                                                @error('conSubject') <small class="text-danger">{{ $message }}</small> @enderror
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-input message-input">
-                                        <textarea name="conMessage" id="message" placeholder="Type message*" required></textarea>
+                                        <textarea name="conMessage" id="message" placeholder="Type message*" required>{{ old('conMessage') }}</textarea>
+                                        @error('conMessage') <small class="text-danger">{{ $message }}</small> @enderror
                                     </div>
                                 </div>
                                 <div class="submit-btn">
@@ -194,7 +212,7 @@
                         <div class="cta-content">
                             <h2 class="title title-anim">Let’s Build Future Together.</h2>
                             <div class="cta-btn wow fadeInUp" data-wow-delay=".6s">
-                                <a class="tj-primary-btn btn-dark" href="contact.html">
+                                <a class="tj-primary-btn btn-dark" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Get Started Now</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>

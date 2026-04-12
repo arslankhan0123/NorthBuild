@@ -67,10 +67,11 @@
                             Best</span>
                         <div class="heading-wrap-content">
                             <div class="sec-heading">
-                                <h2 class="sec-title title-anim">Empowering Business with <span>Expertise.</span></h2>
+                                <h2 class="sec-title title-anim">Trusted Outdoor Construction <span>Services.</span></h2>
+                                <!-- <p>At North Build, we make it easy for you to choose reliable and professional outdoor services that fit your needs perfectly. Whether it’s landscaping, construction, or maintenance, our team ensures high-quality results with attention to detail and long-term durability.</p> -->
                             </div>
                             <div class="btn-wrap wow fadeInUp" data-wow-delay=".6s">
-                                <a class="tj-primary-btn" href="contact.html">
+                                <a class="tj-primary-btn" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Request a Call</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
@@ -86,10 +87,8 @@
                             <div class="choose-icon">
                                 <i class="tji-innovative"></i>
                             </div>
-                            <h4 class="title">Innovative Solutions</h4>
-                            <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to
-                                keep
-                                you competitive in a marketplace.</p>
+                            <h4 class="title">Professional Quality Work</h4>
+                            <p class="desc">We deliver high-standard workmanship in every project, ensuring strong, durable, and visually appealing results. Our team focuses on precision, detail, and long-lasting performance for complete customer satisfaction.</p>
                         </div>
                     </div>
                 </div>
@@ -99,10 +98,8 @@
                             <div class="choose-icon">
                                 <i class="tji-award"></i>
                             </div>
-                            <h4 class="title">Award-Winning Expertise</h4>
-                            <p class="desc">Recognized by industry leaders, our award-winning team has a proven record of
-                                delivering
-                                excellence across projects.</p>
+                            <h4 class="title">Reliable & On-Time Service</h4>
+                            <p class="desc">We value your time and ensure every project is completed on schedule without compromising quality. Our team is dedicated to providing fast, efficient, and dependable services you can trust.</p>
                         </div>
                     </div>
                 </div>
@@ -112,9 +109,8 @@
                             <div class="choose-icon">
                                 <i class="tji-support"></i>
                             </div>
-                            <h4 class="title">Dedicated Support</h4>
-                            <p class="desc">Our team is always available to address your concerns, providing quick and effective
-                                solution to keep your business.</p>
+                            <h4 class="title">Complete Outdoor Solutions</h4>
+                            <p class="desc">From landscaping to construction and seasonal maintenance, we offer all-in-one outdoor services. This makes it easier for you to manage your property with one trusted company.</p>
                         </div>
                     </div>
                 </div>
@@ -162,37 +158,34 @@
                         <div class="sec-heading">
                             <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i class="tji-box"></i>Get to Know
                                 Us</span>
-                            <h2 class="sec-title title-anim">Driving Innovation and Excellence for Sustainable Corporate Success
+                            <!-- <h2 class="sec-title title-anim">Driving Innovation and Excellence for Sustainable Corporate Success
                                 <span>Worldwide.</span>
-                            </h2>
+                            </h2> -->
+                            <p>At North Build, we take pride in delivering reliable outdoor construction, landscaping, and property maintenance services that enhance the beauty, safety, and value of every project we handle.</p>
                         </div>
                     </div>
                     <div class="about-bottom-area">
                         <div class="mission-vision-box wow fadeInLeft" data-wow-delay=".5s">
                             <h4 class="title">Our Mission</h4>
-                            <p class="desc">our mission is empower businesses through innovate best solution, exceptional
-                                service.
-                            </p>
+                            <p class="desc">Our mission is to provide high-quality, dependable, and affordable outdoor services that improve residential and commercial properties.</p>
                             <ul class="list-items">
-                                <li><i class="tji-list"></i>Innovation & Excellence</li>
-                                <li><i class="tji-list"></i>Exceptional Customer</li>
-                                <li><i class="tji-list"></i>Business Growth</li>
+                                <li><i class="tji-list"></i>Deliver reliable and high-quality services on every project</li>
+                                <li><i class="tji-list"></i>Ensure customer satisfaction through professional workmanship</li>
+                                <li><i class="tji-list"></i>Use modern tools and efficient techniques for better results</li>
                             </ul>
                         </div>
                         <div class="mission-vision-box wow fadeInRight" data-wow-delay=".5s">
                             <h4 class="title">Our Vision</h4>
-                            <p class="desc">Our vision is to become a global leader in providing transformative business
-                                solutions.
-                            </p>
+                            <p class="desc">Our vision is to become a trusted and leading name in outdoor construction and landscaping services by continuously improving our quality.</p>
                             <ul class="list-items">
-                                <li><i class="tji-list"></i>Global Leadership</li>
-                                <li><i class="tji-list"></i>Transformative Impact</li>
-                                <li><i class="tji-list"></i>Sustainable Success</li>
+                                <li><i class="tji-list"></i>Become a trusted leader in landscaping and construction services</li>
+                                <li><i class="tji-list"></i>Deliver excellence in every residential and commercial project</li>
+                                <li><i class="tji-list"></i>Expand services with innovation and modern techniques</li>
                             </ul>
                         </div>
                     </div>
                     <div class="about-btn-area wow fadeInUp" data-wow-delay=".6s">
-                        <a class="tj-primary-btn" href="about.html">
+                        <a class="tj-primary-btn" href="{{ route('about') }}">
                             <span class="btn-text"><span>Learn More About Us</span></span>
                             <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                         </a>
@@ -297,13 +290,7 @@
                                     <div class="testimonial-item">
                                         <span class="quote-icon"><i class="tji-quote"></i></span>
                                         <div class="desc">
-                                            <p>Working with Bexon has been a game-changer for our business. Their team's
-                                                professionalism,
-                                                attention to detail, and innovative solutions have helped us streamline operations and
-                                                achieve
-                                                our goals faster than we imagined. We truly feel like a valued partner. The results we’ve
-                                                seen
-                                                after partnering.</p>
+                                            <p>North Build did an amazing job on our landscaping project. The team was professional, on time, and paid great attention to detail. Our outdoor space now looks clean, modern, and well-maintained. Highly recommended for anyone looking for reliable service.</p>
                                         </div>
                                         <div class="testimonial-author">
                                             <div class="author-inner">
@@ -322,12 +309,7 @@
                                     <div class="testimonial-item">
                                         <span class="quote-icon"><i class="tji-quote"></i></span>
                                         <div class="desc">
-                                            <p>The results we’ve seen after partnering with Bexon are beyond our expectations. They not
-                                                only
-                                                understood our vision but also brought new ideas to the table that have taken our business
-                                                to
-                                                the next level. Their expertise and commitment to success make them a trusted.
-                                            </p>
+                                            <p>We hired North Build for fencing and concrete work, and the results were excellent. Everything was completed on schedule with great quality. The team was very cooperative and understood exactly what we needed. Very satisfied with their service.</p>
                                         </div>
                                         <div class="testimonial-author">
                                             <div class="author-inner">
@@ -346,11 +328,7 @@
                                     <div class="testimonial-item">
                                         <span class="quote-icon"><i class="tji-quote"></i></span>
                                         <div class="desc">
-                                            <p>We’ve been working with Bexonfor years, and they continue to deliver outstanding results.
-                                                Their team is proactive, responsive, and always goes the extra mile to ensure our needs
-                                                are
-                                                met. They’ve become a key contributor to our growth and success that really help us"
-                                            </p>
+                                            <p>Excellent experience with North Build! They handled our property cleanup and maintenance very professionally. The staff was friendly, hardworking, and efficient. Our yard has never looked this good before.</p>
                                         </div>
                                         <div class="testimonial-author">
                                             <div class="author-inner">
@@ -409,7 +387,7 @@
                             </div>
                         </div>
                         <div class="team-content">
-                            <h4 class="title"><a href="team-details.html">Eade Marren</a></h4>
+                            <h4 class="title"><a href="#">Eade Marren</a></h4>
                             <span class="designation">Chief Executive</span>
                             <a class="mail-at" href="mailto:info@bexon.com"><i class="tji-at"></i></a>
                         </div>
@@ -437,7 +415,7 @@
                             </div>
                         </div>
                         <div class="team-content">
-                            <h4 class="title"><a href="team-details.html">Savannah Ngueen</a></h4>
+                            <h4 class="title"><a href="#">Savannah Ngueen</a></h4>
                             <span class="designation">Operations Head</span>
                             <a class="mail-at" href="mailto:info@bexon.com"><i class="tji-at"></i></a>
                         </div>
@@ -465,7 +443,7 @@
                             </div>
                         </div>
                         <div class="team-content">
-                            <h4 class="title"><a href="team-details.html">Kristin Watson</a></h4>
+                            <h4 class="title"><a href="#">Kristin Watson</a></h4>
                             <span class="designation">Marketing Lead</span>
                             <a class="mail-at" href="mailto:info@bexon.com"><i class="tji-at"></i></a>
                         </div>
@@ -493,7 +471,7 @@
                             </div>
                         </div>
                         <div class="team-content">
-                            <h4 class="title"><a href="team-details.html">Darlene Robertson</a></h4>
+                            <h4 class="title"><a href="#">Darlene Robertson</a></h4>
                             <span class="designation">Business Director</span>
                             <a class="mail-at" href="mailto:info@bexon.com"><i class="tji-at"></i></a>
                         </div>
@@ -521,12 +499,9 @@
                                 Questions</span>
                             <h2 class="sec-title title-anim">Need <span>Help?</span> Start Here...</h2>
                         </div>
-                        <p class="desc wow fadeInUp" data-wow-delay=".6s">We stay ahead of curve, leveraging <br> cutting-edge
-                            are
-                            technologies and <br> strategies
-                            to competitive</p>
+                        <p class="desc wow fadeInUp" data-wow-delay=".6s">We offer complete outdoor construction, landscaping, maintenance, and property improvement services.</p>
                         <div class="wow fadeInUp" data-wow-delay=".8s">
-                            <a class="tj-primary-btn" href="contact.html">
+                            <a class="tj-primary-btn" href="{{ route('contact') }}">
                                 <span class="btn-text"><span>Request a Call</span></span>
                                 <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>
@@ -537,61 +512,46 @@
                     <div class="accordion tj-faq" id="faqOne">
                         <div class="accordion-item active wow fadeInUp" data-wow-delay=".3s">
                             <button class=" faq-title" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1"
-                                aria-expanded="true">What services does Bexon offer to clients?</button>
+                                aria-expanded="true">What services does North Build provide?</button>
                             <div id="faq-1" class="collapse show" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>North Build provides a wide range of outdoor services including landscaping, fencing, concrete work, grading, irrigation installation, sod installation, junk removal, tree planting, and seasonal cleanup. We also offer snow removal and maintenance services for year-round property care.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay=".4s">
                             <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2"
-                                aria-expanded="false">How do I get started with Corporate Business?</button>
+                                aria-expanded="false">Do you provide services for both residential and commercial properties?</button>
                             <div id="faq-2" class="collapse" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>Yes, we work with both residential and commercial clients. Whether it’s a small home project or a large commercial site, our team delivers professional and high-quality results tailored to your needs.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay=".5s">
                             <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3"
-                                aria-expanded="false">How do you ensure the success of a project?</button>
+                                aria-expanded="false">How do I get a quote for my project?</button>
                             <div id="faq-3" class="collapse" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>You can contact us through our website or call our team directly. We will review your requirements and provide a free, customized quote based on your project size and service type.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay=".6s">
                             <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4"
-                                aria-expanded="false">How long will it take to complete my project?</button>
+                                aria-expanded="false">Do you offer seasonal maintenance services?</button>
                             <div id="faq-4" class="collapse" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>Yes, we provide seasonal services such as spring cleanup, fall cleanup, lawn maintenance, and winter snow removal. Our year-round services ensure your property stays clean and well-maintained in every season.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay=".7s">
                             <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5"
-                                aria-expanded="false">Can I track the progress of my project?</button>
+                                aria-expanded="false">Why should I choose North Build?</button>
                             <div id="faq-5" class="collapse" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>North Build is known for reliable service, skilled workmanship, and attention to detail. We focus on customer satisfaction, timely project completion, and delivering long-lasting outdoor solutions you can trust.</p>
                                 </div>
                             </div>
                         </div>
@@ -611,7 +571,7 @@
                         <div class="cta-content">
                             <h2 class="title title-anim">Let’s Build Future Together.</h2>
                             <div class="cta-btn wow fadeInUp" data-wow-delay=".6s">
-                                <a class="tj-primary-btn btn-dark" href="contact.html">
+                                <a class="tj-primary-btn btn-dark" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Get Started Now</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
