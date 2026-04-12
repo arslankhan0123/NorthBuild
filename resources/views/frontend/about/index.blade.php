@@ -290,13 +290,7 @@
                                     <div class="testimonial-item">
                                         <span class="quote-icon"><i class="tji-quote"></i></span>
                                         <div class="desc">
-                                            <p>Working with Bexon has been a game-changer for our business. Their team's
-                                                professionalism,
-                                                attention to detail, and innovative solutions have helped us streamline operations and
-                                                achieve
-                                                our goals faster than we imagined. We truly feel like a valued partner. The results we’ve
-                                                seen
-                                                after partnering.</p>
+                                            <p>North Build did an amazing job on our landscaping project. The team was professional, on time, and paid great attention to detail. Our outdoor space now looks clean, modern, and well-maintained. Highly recommended for anyone looking for reliable service.</p>
                                         </div>
                                         <div class="testimonial-author">
                                             <div class="author-inner">
@@ -315,12 +309,7 @@
                                     <div class="testimonial-item">
                                         <span class="quote-icon"><i class="tji-quote"></i></span>
                                         <div class="desc">
-                                            <p>The results we’ve seen after partnering with Bexon are beyond our expectations. They not
-                                                only
-                                                understood our vision but also brought new ideas to the table that have taken our business
-                                                to
-                                                the next level. Their expertise and commitment to success make them a trusted.
-                                            </p>
+                                            <p>We hired North Build for fencing and concrete work, and the results were excellent. Everything was completed on schedule with great quality. The team was very cooperative and understood exactly what we needed. Very satisfied with their service.</p>
                                         </div>
                                         <div class="testimonial-author">
                                             <div class="author-inner">
@@ -339,11 +328,7 @@
                                     <div class="testimonial-item">
                                         <span class="quote-icon"><i class="tji-quote"></i></span>
                                         <div class="desc">
-                                            <p>We’ve been working with Bexonfor years, and they continue to deliver outstanding results.
-                                                Their team is proactive, responsive, and always goes the extra mile to ensure our needs
-                                                are
-                                                met. They’ve become a key contributor to our growth and success that really help us"
-                                            </p>
+                                            <p>Excellent experience with North Build! They handled our property cleanup and maintenance very professionally. The staff was friendly, hardworking, and efficient. Our yard has never looked this good before.</p>
                                         </div>
                                         <div class="testimonial-author">
                                             <div class="author-inner">
@@ -514,10 +499,7 @@
                                 Questions</span>
                             <h2 class="sec-title title-anim">Need <span>Help?</span> Start Here...</h2>
                         </div>
-                        <p class="desc wow fadeInUp" data-wow-delay=".6s">We stay ahead of curve, leveraging <br> cutting-edge
-                            are
-                            technologies and <br> strategies
-                            to competitive</p>
+                        <p class="desc wow fadeInUp" data-wow-delay=".6s">We offer complete outdoor construction, landscaping, maintenance, and property improvement services.</p>
                         <div class="wow fadeInUp" data-wow-delay=".8s">
                             <a class="tj-primary-btn" href="{{ route('contact') }}">
                                 <span class="btn-text"><span>Request a Call</span></span>
@@ -530,61 +512,46 @@
                     <div class="accordion tj-faq" id="faqOne">
                         <div class="accordion-item active wow fadeInUp" data-wow-delay=".3s">
                             <button class=" faq-title" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1"
-                                aria-expanded="true">What services does Bexon offer to clients?</button>
+                                aria-expanded="true">What services does North Build provide?</button>
                             <div id="faq-1" class="collapse show" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>North Build provides a wide range of outdoor services including landscaping, fencing, concrete work, grading, irrigation installation, sod installation, junk removal, tree planting, and seasonal cleanup. We also offer snow removal and maintenance services for year-round property care.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay=".4s">
                             <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2"
-                                aria-expanded="false">How do I get started with Corporate Business?</button>
+                                aria-expanded="false">Do you provide services for both residential and commercial properties?</button>
                             <div id="faq-2" class="collapse" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>Yes, we work with both residential and commercial clients. Whether it’s a small home project or a large commercial site, our team delivers professional and high-quality results tailored to your needs.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay=".5s">
                             <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3"
-                                aria-expanded="false">How do you ensure the success of a project?</button>
+                                aria-expanded="false">How do I get a quote for my project?</button>
                             <div id="faq-3" class="collapse" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>You can contact us through our website or call our team directly. We will review your requirements and provide a free, customized quote based on your project size and service type.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay=".6s">
                             <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4"
-                                aria-expanded="false">How long will it take to complete my project?</button>
+                                aria-expanded="false">Do you offer seasonal maintenance services?</button>
                             <div id="faq-4" class="collapse" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>Yes, we provide seasonal services such as spring cleanup, fall cleanup, lawn maintenance, and winter snow removal. Our year-round services ensure your property stays clean and well-maintained in every season.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item wow fadeInUp" data-wow-delay=".7s">
                             <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5"
-                                aria-expanded="false">Can I track the progress of my project?</button>
+                                aria-expanded="false">Why should I choose North Build?</button>
                             <div id="faq-5" class="collapse" data-bs-parent="#faqOne">
                                 <div class="accordion-body faq-text">
-                                    <p>Getting started is easy! Simply reach out to us through our contact form or give us a call,
-                                        and
-                                        we’ll schedule a consultation to discuss your project and how we can best assist you. Our team
-                                        keeps you informed throughout the process, ensuring quality control and timely delivery.</p>
+                                    <p>North Build is known for reliable service, skilled workmanship, and attention to detail. We focus on customer satisfaction, timely project completion, and delivering long-lasting outdoor solutions you can trust.</p>
                                 </div>
                             </div>
                         </div>
