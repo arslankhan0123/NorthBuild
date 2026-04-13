@@ -49,7 +49,7 @@
                     <div class="footer-widget footer-col-2 widget-nav-menu wow fadeInUp" data-wow-delay=".3s">
                         <h5 class="title">Services</h5>
                         <ul>
-                            @foreach($header_services as $fs)
+                            @foreach($header_services->take(5) as $fs)
                             <li>
                                 <a href="{{ route('services.details', ['id' => $fs->id]) }}"
                                    style="display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;">
