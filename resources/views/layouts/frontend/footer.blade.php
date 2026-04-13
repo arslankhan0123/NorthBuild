@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <div class="footer-subscribe wow fadeInUp" data-wow-delay=".3s">
                         <div class="subscribe-logo">
-                            <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="">
+                            <img src="{{asset('logo.png')}}" alt="">
                         </div>
                         <div class="subscribe-form">
                             <form action="#">
@@ -28,7 +28,7 @@
                     <div class="footer-widget footer-col-1 wow fadeInUp" data-wow-delay=".1s">
                         <div class="footer-logo">
                             <a href="{{ route('home') }}">
-                                <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logos">
+                                <img src="{{asset('logo.png')}}" alt="Logos">
                             </a>
                         </div>
                         <div class="footer-text">

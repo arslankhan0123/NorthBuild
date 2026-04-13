@@ -34,7 +34,8 @@
             <div class="hamburger_top d-flex align-items-center justify-content-between">
                 <div class="hamburger_logo">
                     <a href="{{ route('home') }}" class="mobile_logo">
-                        <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logo">
+                        <!-- <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logo"> -->
+                        <img src="{{asset('logo.png')}}" alt="Logo">
                     </a>
                 </div>
                 <div class="hamburger_close">
@@ -42,7 +43,8 @@
                 </div>
             </div>
             <div class="offcanvas-text">
-                <p>Developing personalize our customer journeys to increase satisfaction & loyalty of our expansion recognized
+                <p>Developing personalize our customer journeys to increase satisfaction & loyalty of our expansion
+                    recognized
                     by industry leaders.</p>
             </div>
             <div class="hamburger-search-area">
@@ -98,7 +100,8 @@
             <div class="hamburger_top d-flex align-items-center justify-content-between">
                 <div class="hamburger_logo">
                     <a href="{{ route('home') }}" class="mobile_logo">
-                        <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logo">
+                        <!-- <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logo"> -->
+                        <img src="{{asset('logo.png')}}" alt="Logo">
                     </a>
                 </div>
                 <div class="hamburger_close">
@@ -161,15 +164,17 @@
                 <div class="header-wrapper">
                     <!-- site logo -->
                     <div class="site_logo">
-                        <a class="logo" href="{{ route('home') }}"><img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt=""></a>
+                        <a class="logo" href="{{ route('home') }}"><img src="{{asset('logo.png')}}" alt=""></a>
                     </div>
 
                     <!-- navigation -->
                     <div class="menu-area d-none d-lg-inline-flex align-items-center">
                         <nav id="mobile-menu" class="mainmenu">
                             <ul>
-                                <li class="{{ request()->routeIs('home') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('home') }}">Home</a></li>
-                                <li class="{{ request()->routeIs('about') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('about') }}">About</a></li>
+                                <li class="{{ request()->routeIs('home') ? 'current-menu-ancestor' : '' }}"><a
+                                        href="{{ route('home') }}">Home</a></li>
+                                <li class="{{ request()->routeIs('about') ? 'current-menu-ancestor' : '' }}"><a
+                                        href="{{ route('about') }}">About</a></li>
                                 <!-- <li class="has-dropdown"><a href="about.html">Pages</a>
                                     <ul class="sub-menu header__mega-menu mega-menu mega-menu-pages">
                                         <li>
@@ -262,21 +267,24 @@
                                         </li>
                                     </ul>
                                 </li> -->
-                                <li class="has-dropdown {{ request()->is('services*') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('services') }}">Services</a>
+                                <li
+                                    class="has-dropdown {{ request()->is('services*') ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('services') }}">Services</a>
                                     <ul class="sub-menu  mega-menu-service">
                                         @foreach($header_services as $s_item)
-                                        <li> 
-                                            <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => $s_item->id]) }}"> 
-                                                <span class="mega-menu-service-icon">
-                                                    <i class="tji-service-{{ ($loop->index % 6) + 1 }}"></i>
-                                                </span> 
-                                                <span class="mega-menu-service-title">{{ $s_item->name }}</span> 
-                                                <span class="mega-menu-service-nav">
-                                                    <i class="tji-arrow-right-long"></i>
-                                                    <i class="tji-arrow-right-long"></i>
-                                                </span>
-                                            </a>
-                                        </li>
+                                            <li>
+                                                <a class="mega-menu-service-single"
+                                                    href="{{ route('services.details', ['id' => $s_item->id]) }}">
+                                                    <span class="mega-menu-service-icon">
+                                                        <i class="tji-service-{{ ($loop->index % 6) + 1 }}"></i>
+                                                    </span>
+                                                    <span class="mega-menu-service-title">{{ $s_item->name }}</span>
+                                                    <span class="mega-menu-service-nav">
+                                                        <i class="tji-arrow-right-long"></i>
+                                                        <i class="tji-arrow-right-long"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
                                         @endforeach
 
                                     </ul>
@@ -295,8 +303,10 @@
                                         <li><a href="blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li> -->
-                                <li class="{{ request()->routeIs('careers') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('careers') }}">Careers</a></li>
-                                <li class="{{ request()->routeIs('contact') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
+                                <li class="{{ request()->routeIs('careers') ? 'current-menu-ancestor' : '' }}"><a
+                                        href="{{ route('careers') }}">Careers</a></li>
+                                <li class="{{ request()->routeIs('contact') ? 'current-menu-ancestor' : '' }}"><a
+                                        href="{{ route('contact') }}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -308,7 +318,8 @@
                                 <i class="tji-search"></i>
                             </button>
                             <button type="button" class="search_close_btn">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                     <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -350,7 +361,8 @@
                             <form action="#">
                                 <div class="search_input">
                                     <div class="search-box">
-                                        <input class="search-form-input" type="text" placeholder="Type Words and Hit Enter" required>
+                                        <input class="search-form-input" type="text"
+                                            placeholder="Type Words and Hit Enter" required>
                                         <button type="submit">
                                             <i class="tji-search"></i>
                                         </button>
@@ -374,15 +386,18 @@
                 <div class="header-wrapper">
                     <!-- site logo -->
                     <div class="site_logo">
-                        <a class="logo" href="{{ route('home') }}"><img src="{{asset('frontend/assets/images/logos/logo.webp')}}" alt=""></a>
+                        <!-- <a class="logo" href="{{ route('home') }}"><img src="{{asset('frontend/assets/images/logos/logo.webp')}}" alt=""></a> -->
+                        <a class="logo" href="{{ route('home') }}"><img src="{{asset('logo.png')}}" alt=""></a>
                     </div>
 
                     <!-- navigation -->
                     <div class="menu-area d-none d-lg-inline-flex align-items-center">
                         <nav class="mainmenu">
                             <ul>
-                                <li class="{{ request()->routeIs('home') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('home') }}">Home</a></li>
-                                <li class="{{ request()->routeIs('about') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('about') }}">About</a></li>
+                                <li class="{{ request()->routeIs('home') ? 'current-menu-ancestor' : '' }}"><a
+                                        href="{{ route('home') }}">Home</a></li>
+                                <li class="{{ request()->routeIs('about') ? 'current-menu-ancestor' : '' }}"><a
+                                        href="{{ route('about') }}">About</a></li>
                                 <!-- <li class="has-dropdown"><a href="about.html">Pages</a>
                                     <ul class="sub-menu header__mega-menu mega-menu mega-menu-pages">
                                         <li>
@@ -475,21 +490,24 @@
                                         </li>
                                     </ul>
                                 </li> -->
-                                <li class="has-dropdown {{ request()->is('services*') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('services') }}">Services</a>
+                                <li
+                                    class="has-dropdown {{ request()->is('services*') ? 'current-menu-ancestor' : '' }}">
+                                    <a href="{{ route('services') }}">Services</a>
                                     <ul class="sub-menu  mega-menu-service">
                                         @foreach($header_services as $s_item)
-                                        <li> 
-                                            <a class="mega-menu-service-single" href="{{ route('services.details', ['id' => $s_item->id]) }}"> 
-                                                <span class="mega-menu-service-icon">
-                                                    <i class="tji-service-{{ ($loop->index % 6) + 1 }}"></i>
-                                                </span> 
-                                                <span class="mega-menu-service-title">{{ $s_item->name }}</span> 
-                                                <span class="mega-menu-service-nav">
-                                                    <i class="tji-arrow-right-long"></i>
-                                                    <i class="tji-arrow-right-long"></i>
-                                                </span>
-                                            </a>
-                                        </li>
+                                            <li>
+                                                <a class="mega-menu-service-single"
+                                                    href="{{ route('services.details', ['id' => $s_item->id]) }}">
+                                                    <span class="mega-menu-service-icon">
+                                                        <i class="tji-service-{{ ($loop->index % 6) + 1 }}"></i>
+                                                    </span>
+                                                    <span class="mega-menu-service-title">{{ $s_item->name }}</span>
+                                                    <span class="mega-menu-service-nav">
+                                                        <i class="tji-arrow-right-long"></i>
+                                                        <i class="tji-arrow-right-long"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
                                         @endforeach
 
                                     </ul>
@@ -508,8 +526,10 @@
                                         <li><a href="blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li> -->
-                                <li class="{{ request()->routeIs('careers') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('careers') }}">Careers</a></li>
-                                <li class="{{ request()->routeIs('contact') ? 'current-menu-ancestor' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
+                                <li class="{{ request()->routeIs('careers') ? 'current-menu-ancestor' : '' }}"><a
+                                        href="{{ route('careers') }}">Careers</a></li>
+                                <li class="{{ request()->routeIs('contact') ? 'current-menu-ancestor' : '' }}"><a
+                                        href="{{ route('contact') }}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -521,7 +541,8 @@
                                 <i class="tji-search"></i>
                             </button>
                             <button type="button" class="search_close_btn">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                     <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -563,7 +584,8 @@
                             <form action="#">
                                 <div class="search_input">
                                     <div class="search-box">
-                                        <input class="search-form-input" type="text" placeholder="Type Words and Hit Enter" required>
+                                        <input class="search-form-input" type="text"
+                                            placeholder="Type Words and Hit Enter" required>
                                         <button type="submit">
                                             <i class="tji-search"></i>
                                         </button>
