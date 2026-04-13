@@ -2,19 +2,6 @@
 @section('title', 'Services')
 
 @section('content')
-@if(session('success'))
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-    <i class="fas fa-check-circle me-2"></i> {{ session('success') }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-@endif
-
-@if(session('error'))
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <i class="fas fa-exclamation-circle me-2"></i> {{ session('error') }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-@endif
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const header = document.querySelector(".header-area");
@@ -56,110 +43,55 @@
     </section>
     <!-- end: Breadcrumb Section -->
 
+    <div class="container mt-5">
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissible fade show mb-5 p-4 border-0 shadow-sm" role="alert" style="border-radius: 15px; background-color: #d1e7dd; color: #0f5132;">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-check-circle me-3 fa-2x"></i>
+                    <div>
+                        <h5 class="alert-heading mb-1 fw-bold">Success!</h5>
+                        <p class="mb-0">{{ session('success') }}</p>
+                    </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        @if(session('error'))
+            <div class="alert alert-danger alert-dismissible fade show mb-5 p-4 border-0 shadow-sm" role="alert" style="border-radius: 15px;">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-exclamation-circle me-3 fa-2x"></i>
+                    <div>
+                        <h5 class="alert-heading mb-1 fw-bold">Error!</h5>
+                        <p class="mb-0">{{ session('error') }}</p>
+                    </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+    </div>
+
     <!-- start: Service Section -->
     <section class="tj-service-section service-4 section-gap">
         <div class="container">
             <div class="row row-gap-4">
+                @foreach($services as $service)
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-item style-4 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="service-item style-4 wow fadeInUp" data-wow-delay=".{{ ($loop->index % 9) + 1 }}s">
                         <div class="service-icon">
-                            <i class="tji-service-1"></i>
+                            <i class="tji-service-{{ ($loop->index % 6) + 1 }}"></i>
                         </div>
                         <div class="service-content">
-                            <h4 class="title"><a href="service-details.html">Business Strategy Development</a></h4>
-                            <p class="desc">Customer Experience Solutions are designed to enhance every touchpoint of your
-                                customer
-                                journey, from first interaction.</p>
-                            <a class="text-btn" href="service-details.html">
+                            <h4 class="title"><a href="{{ route('services.details', $service->id) }}">{{ $service->name }}</a></h4>
+                            <p class="desc">{{ $service->short_description }}</p>
+                            <a class="text-btn" href="{{ route('services.details', $service->id) }}">
                                 <span class="btn-text"><span>Learn More</span></span>
                                 <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item style-4 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="service-icon">
-                            <i class="tji-service-2"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="title"><a href="service-details.html">Customer Experience Solutions</a></h4>
-                            <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to
-                                keep
-                                you competitive in a marketplace.</p>
-                            <a class="text-btn" href="service-details.html">
-                                <span class="btn-text"><span>Learn More</span></span>
-                                <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item style-4 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="service-icon">
-                            <i class="tji-service-5"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="title"><a href="service-details.html">IT Support & Maintenance</a></h4>
-                            <p class="desc">Our IT Support & Maintenance services ensure that your technology infrastructure is
-                                running smoothly and securely.</p>
-                            <a class="text-btn" href="service-details.html">
-                                <span class="btn-text"><span>Learn More</span></span>
-                                <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item style-4 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="service-icon">
-                            <i class="tji-service-3"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="title"><a href="service-details.html">Sustainability and ESG Consulting</a></h4>
-                            <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to
-                                keep
-                                you competitive in a marketplace.</p>
-                            <a class="text-btn" href="service-details.html">
-                                <span class="btn-text"><span>Learn More</span></span>
-                                <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item style-4 wow fadeInUp" data-wow-delay=".9s">
-                        <div class="service-icon">
-                            <i class="tji-service-4"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="title"><a href="service-details.html">Training and Development Programs</a></h4>
-                            <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to
-                                keep
-                                you competitive in a marketplace.</p>
-                            <a class="text-btn" href="service-details.html">
-                                <span class="btn-text"><span>Learn More</span></span>
-                                <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item style-4 wow fadeInUp" data-wow-delay="1s">
-                        <div class="service-icon">
-                            <i class="tji-service-6"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="title"><a href="service-details.html">Marketing Strategy & Campaigns</a></h4>
-                            <p class="desc">Effective marketing is key to our driving business growth. Our Marketing Strategy &
-                                Campaigns service.</p>
-                            <a class="text-btn" href="service-details.html">
-                                <span class="btn-text"><span>Learn More</span></span>
-                                <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -206,35 +138,33 @@
                             <span class="sub-title text-white"><i class="tji-box"></i>Get in Touch</span>
                             <h2 class="sec-title title-anim">Drop Us a <span>Line.</span></h2>
                         </div>
-                        <form id="contact-form-2">
+                        <form id="contact-form-2" action="{{ route('contact.store') }}" method="POST">
+                            @csrf
                             <div class="row wow fadeInUp" data-wow-delay=".5s">
                                 <div class="col-sm-6">
                                     <div class="form-input">
-                                        <input type="text" name="cfName2" placeholder="Full Name *">
+                                        <input type="text" name="conName" placeholder="Full Name *" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-input">
-                                        <input type="email" name="cfEmail2" placeholder="Email Address *">
+                                        <input type="email" name="conEmail" placeholder="Email Address *" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-input">
-                                        <input type="tel" name="cfPhone2" placeholder="Phone number *">
+                                        <input type="tel" name="conPhone" placeholder="Phone number *" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-input">
                                         <div class="tj-nice-select-box">
                                             <div class="tj-select">
-                                                <select name="cfSubject2">
-                                                    <option value="0">Chose a option</option>
-                                                    <option value="1">Business Strategy</option>
-                                                    <option value="2">Customer Experience</option>
-                                                    <option value="3">Sustainability and ESG</option>
-                                                    <option value="4">Training and Development</option>
-                                                    <option value="5">IT Support & Maintenance</option>
-                                                    <option value="6">Marketing Strategy</option>
+                                                <select name="conSubject">
+                                                    <option value="">Chose a option</option>
+                                                    @foreach($services as $service)
+                                                    <option value="{{ $service->name }}">{{ $service->name }}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -242,7 +172,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-input message-input">
-                                        <textarea name="cfMessage2" id="message" placeholder="Type message *"></textarea>
+                                        <textarea name="conMessage" id="message" placeholder="Type message *" required></textarea>
                                     </div>
                                 </div>
                                 <div class="submit-btn">
@@ -267,7 +197,7 @@
     <!-- end: Contact Section -->
 
     <!-- start: Pricing Section -->
-    <section class="tj-pricing-section-2 section-top-gap">
+    <!-- <section class="tj-pricing-section-2 section-top-gap">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -373,7 +303,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- end: Pricing Section -->
 
     <!-- start: Client Section -->
@@ -427,7 +357,7 @@
     <!-- end: Client Section -->
 
     <!-- start: Cta Section -->
-    <section class="tj-cta-section">
+    <section class="tj-cta-section mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">

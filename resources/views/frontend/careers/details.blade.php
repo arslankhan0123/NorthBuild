@@ -12,7 +12,8 @@
 
             const logo = document.querySelector(".logo img");
             if (logo) {
-                logo.src = "{{ asset('frontend/assets/images/logos/logo.webp') }}";
+                logo.src = "{{asset('logo.png')}}";
+                // logo.src = "{{ asset('frontend/assets/images/logos/logo.webp') }}";
             }
         });
     </script>
@@ -120,7 +121,7 @@
         <!-- end: Career Details Section -->
 
         <!-- start: Cta Section -->
-        <section class="tj-cta-section">
+        <section class="tj-cta-section mb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
