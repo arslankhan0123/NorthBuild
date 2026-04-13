@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <div class="footer-subscribe wow fadeInUp" data-wow-delay=".3s">
                         <div class="subscribe-logo">
-                            <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="">
+                            <img src="{{asset('logo.png')}}" alt="">
                         </div>
                         <div class="subscribe-form">
                             <form action="#">
@@ -28,7 +28,7 @@
                     <div class="footer-widget footer-col-1 wow fadeInUp" data-wow-delay=".1s">
                         <div class="footer-logo">
                             <a href="{{ route('home') }}">
-                                <img src="{{asset('frontend/assets/images/logos/logo-2.webp')}}" alt="Logos">
+                                <img src="{{asset('logo.png')}}" alt="Logos">
                             </a>
                         </div>
                         <div class="footer-text">
@@ -49,7 +49,7 @@
                     <div class="footer-widget footer-col-2 widget-nav-menu wow fadeInUp" data-wow-delay=".3s">
                         <h5 class="title">Services</h5>
                         <ul>
-                            @foreach($header_services as $fs)
+                            @foreach($header_services->take(5) as $fs)
                             <li>
                                 <a href="{{ route('services.details', ['id' => $fs->id]) }}"
                                    style="display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;">

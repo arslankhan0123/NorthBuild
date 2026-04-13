@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
+    public function index()
+    {
+        $services = Service::where('status', 'active')->with('highlights')->latest()->take(4)->get();
+        return view('welcome', compact('services'));
+    }
+
     public function careers()
     {
         $careers = Career::where('status', 'active')->latest()->get();
@@ -32,7 +38,8 @@ class FrontendController extends Controller
 
     public function services()
     {
-        return view('frontend.services.index');
+        $services = Service::where('status', 'active')->latest()->get();
+        return view('frontend.services.index', compact('services'));
     }
 
     public function servicesDetails($id)
