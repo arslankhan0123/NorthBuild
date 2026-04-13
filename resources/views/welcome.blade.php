@@ -26,12 +26,10 @@
                     <div class="container">
                         <div class="slider-wrapper">
                             <div class="slider-content">
-                                <h1 class="slider-title">Leading Future for <span>Business.</span></h1>
-                                <div class="slider-desc">Committed to delivering innovative solutions that drive success. With a
-                                    focus
-                                    on quality.</div>
+                                <h1 class="slider-title">Reliable Outdoor Services <span>You Can Trust.</span></h1>
+                                <div class="slider-desc">We provide professional landscaping, construction, and maintenance services to keep your property clean, safe, and visually appealing all year round.</div>
                                 <div class="slider-btn">
-                                    <a class="tj-primary-btn" href="contact.html">
+                                    <a class="tj-primary-btn" href="{{route('contact')}}">
                                         <span class="btn-text"><span>Get Started</span></span>
                                         <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                     </a>
@@ -45,12 +43,10 @@
                     <div class="container">
                         <div class="slider-wrapper">
                             <div class="slider-content">
-                                <h1 class="slider-title">Leading Future for <span>Business.</span></h1>
-                                <div class="slider-desc">Committed to delivering innovative solutions that drive success. With a
-                                    focus
-                                    on quality.</div>
+                                <h1 class="slider-title">Complete Property <span>Care Solutions.</span></h1>
+                                <div class="slider-desc">From fencing and concrete work to snow removal and cleanup, we handle all your outdoor needs with quality and precision.</div>
                                 <div class="slider-btn">
-                                    <a class="tj-primary-btn" href="contact.html">
+                                    <a class="tj-primary-btn" href="{{route('contact')}}">
                                         <span class="btn-text"><span>Get Started</span></span>
                                         <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                     </a>
@@ -64,12 +60,10 @@
                     <div class="container">
                         <div class="slider-wrapper">
                             <div class="slider-content">
-                                <h1 class="slider-title">Leading Future for <span>Business.</span></h1>
-                                <div class="slider-desc">Committed to delivering innovative solutions that drive success. With a
-                                    focus
-                                    on quality.</div>
+                                <h1 class="slider-title">Building Better Outdoor <span>Spaces.</span></h1>
+                                <div class="slider-desc">Our expert team delivers durable, efficient, and customized solutions to enhance the beauty and value of your property.</div>
                                 <div class="slider-btn">
-                                    <a class="tj-primary-btn" href="contact.html">
+                                    <a class="tj-primary-btn" href="{{route('contact')}}">
                                         <span class="btn-text"><span>Get Started</span></span>
                                         <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                     </a>
@@ -109,7 +103,7 @@
         </div>
         <div class="circle-text-wrap wow fadeInUp" data-wow-delay="1s">
             <span class="circle-text" data-bg-image="{{asset('frontend/assets/images/hero/circle-text.webp')}}"></span>
-            <a class="circle-icon" href="service.html"><i class="tji-arrow-down-big"></i></a>
+            <a class="circle-icon" href="{{ route('services') }}"><i class="tji-arrow-down-big"></i></a>
         </div>
     </section>
     <!-- end: Banner Slider -->
@@ -186,13 +180,10 @@
                         <div class="about-content">
                             <div class="sec-heading style-2">
                                 <span class="sub-title">Get to Know Us</span>
-                                <h2 class="sec-title title-highlight">Driving into Excellence & Innovation: Your Trusted Partner
-                                    for
-                                    Sustainable Business Success.
-                                </h2>
+                                <h2 class="sec-title title-highlight">Driving Innovation and Excellence for Sustainable Corporate Success <span>Worldwide.</span></h2>
                             </div>
                             <div class="wow fadeInUp" data-wow-delay=".3s">
-                                <a class="text-btn" href="about.html">
+                                <a class="text-btn" href="{{ route('about') }}">
                                     <span class="btn-text"><span>Learn More</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
@@ -269,7 +260,7 @@
                             </h2>
                         </div>
                         <div class="wow fadeInUp" data-wow-delay=".6s">
-                            <a class="tj-primary-btn" href="service.html">
+                            <a class="tj-primary-btn" href="{{ route('services') }}">
                                 <span class="btn-text"><span>More Services</span></span>
                                 <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>
@@ -459,7 +450,7 @@
                                 increase
                                 satisfaction and loyalty.</p>
                             <div class="btn-wrap wow fadeInUp" data-wow-delay=".6s">
-                                <a class="tj-primary-btn" href="contact.html">
+                                <a class="tj-primary-btn" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Request a Call</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
@@ -786,7 +777,7 @@
                                 <span class="package-period">/per month</span>
                             </div>
                             <div class="pricing-btn">
-                                <a class="text-btn" href="contact.html">
+                                <a class="text-btn" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Chose Plan</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
@@ -817,7 +808,7 @@
                                 <span class="package-period">/per month</span>
                             </div>
                             <div class="pricing-btn">
-                                <a class="text-btn" href="contact.html">
+                                <a class="text-btn" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Chose Plan</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
@@ -848,7 +839,7 @@
                                 <span class="package-period">/per month</span>
                             </div>
                             <div class="pricing-btn">
-                                <a class="text-btn" href="contact.html">
+                                <a class="text-btn" href="{{ route('contact') }}">
                                     <span class="btn-text"><span>Chose Plan</span></span>
                                     <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                 </a>
