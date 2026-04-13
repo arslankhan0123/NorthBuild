@@ -8,9 +8,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\AdminContactController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [FrontendController::class, 'index'])->name('home');
 
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');

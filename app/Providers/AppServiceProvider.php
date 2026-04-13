@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $views = ['layouts.frontend.header', 'layouts.frontend.footer'];
         View::composer($views, function ($view) {
-            $view->with('header_services', Service::where('status', 'active')->get());
+            $view->with('header_services', Service::where('status', 'active')->latest()->get());
         });
     }
 }
