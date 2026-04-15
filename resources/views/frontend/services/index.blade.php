@@ -113,7 +113,7 @@
                                 <div class="location-indicator loc-1">
                                     <div class="location-tooltip">
                                         <span>Head office:</span>
-                                        <p>993 Renner Burg, West Rond, MT 94251-030, USA.</p>
+                                        <p>100 Whiteram Close Northeast, T1Y 5X8</p>
                                         <a href="tel:10095447818">P: +1 (403) 830-0054</a>
                                         <a href="mailto:info@truenorthbuild.ca">M: info@truenorthbuild.ca</a>
                                     </div>
@@ -204,112 +204,112 @@
 
         <!-- start: Pricing Section -->
         <!-- <section class="tj-pricing-section-2 section-top-gap">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="sec-heading text-center wow fadeInUp" data-wow-delay=".3s">
-                                <span class="sub-title"><i class="tji-box"></i>Pricing plan</span>
-                                <h2 class="sec-title">Our Pricing <span>Plan.</span></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-gap-4">
-                        <div class="col-xl-4 col-md-6">
-                            <div class="pricing-box wow fadeInUp" data-wow-delay=".5s">
-                                <div class="pricing-header">
-                                    <h4 class="package-name">Basic Plan</h4>
-                                    <div class="package-desc">
-                                        <p>Essential Business Services</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="sec-heading text-center wow fadeInUp" data-wow-delay=".3s">
+                                        <span class="sub-title"><i class="tji-box"></i>Pricing plan</span>
+                                        <h2 class="sec-title">Our Pricing <span>Plan.</span></h2>
                                     </div>
-                                    <div class="package-price">
-                                        <span class="package-currency">$</span>
-                                        <span class="price-number">99</span>
-                                        <span class="package-period">/per month</span>
-                                    </div>
-                                    <div class="pricing-btn">
-                                        <a class="text-btn" href="contact.html">
-                                            <span class="btn-text"><span>Chose Plan</span></span>
-                                            <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="list-items">
-                                    <ul>
-                                        <li><i class="tji-list"></i>Access to core services</li>
-                                        <li><i class="tji-list"></i>Limited customer support (email)</li>
-                                        <li><i class="tji-list"></i>1 project per month</li>
-                                        <li><i class="tji-list"></i>Basic reporting and analytics</li>
-                                        <li><i class="tji-list"></i>Standard templates and tools</li>
-                                        <li><i class="tji-list"></i>Basic performance tracking</li>
-                                    </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="pricing-box active wow fadeInUp" data-wow-delay=".7s">
-                                <div class="pricing-header">
-                                    <h4 class="package-name">Standard Plan</h4>
-                                    <div class="package-desc">
-                                        <p>Complete Business Solutions</p>
-                                    </div>
-                                    <div class="package-price">
-                                        <span class="package-currency">$</span>
-                                        <span class="price-number">249</span>
-                                        <span class="package-period">/per month</span>
-                                    </div>
-                                    <div class="pricing-btn">
-                                        <a class="text-btn" href="contact.html">
-                                            <span class="btn-text"><span>Chose Plan</span></span>
-                                            <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                        </a>
+                            <div class="row row-gap-4">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="pricing-box wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="pricing-header">
+                                            <h4 class="package-name">Basic Plan</h4>
+                                            <div class="package-desc">
+                                                <p>Essential Business Services</p>
+                                            </div>
+                                            <div class="package-price">
+                                                <span class="package-currency">$</span>
+                                                <span class="price-number">99</span>
+                                                <span class="package-period">/per month</span>
+                                            </div>
+                                            <div class="pricing-btn">
+                                                <a class="text-btn" href="contact.html">
+                                                    <span class="btn-text"><span>Chose Plan</span></span>
+                                                    <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-items">
+                                            <ul>
+                                                <li><i class="tji-list"></i>Access to core services</li>
+                                                <li><i class="tji-list"></i>Limited customer support (email)</li>
+                                                <li><i class="tji-list"></i>1 project per month</li>
+                                                <li><i class="tji-list"></i>Basic reporting and analytics</li>
+                                                <li><i class="tji-list"></i>Standard templates and tools</li>
+                                                <li><i class="tji-list"></i>Basic performance tracking</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="list-items">
-                                    <ul>
-                                        <li><i class="tji-list"></i>All features in Basic Plan</li>
-                                        <li><i class="tji-list"></i>Priority customer support</li>
-                                        <li><i class="tji-list"></i>Up to 3 projects per month</li>
-                                        <li><i class="tji-list"></i>Monthly performance reviews</li>
-                                        <li><i class="tji-list"></i>Collaboration tools for team</li>
-                                        <li><i class="tji-list"></i>Custom templates</li>
-                                    </ul>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="pricing-box active wow fadeInUp" data-wow-delay=".7s">
+                                        <div class="pricing-header">
+                                            <h4 class="package-name">Standard Plan</h4>
+                                            <div class="package-desc">
+                                                <p>Complete Business Solutions</p>
+                                            </div>
+                                            <div class="package-price">
+                                                <span class="package-currency">$</span>
+                                                <span class="price-number">249</span>
+                                                <span class="package-period">/per month</span>
+                                            </div>
+                                            <div class="pricing-btn">
+                                                <a class="text-btn" href="contact.html">
+                                                    <span class="btn-text"><span>Chose Plan</span></span>
+                                                    <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-items">
+                                            <ul>
+                                                <li><i class="tji-list"></i>All features in Basic Plan</li>
+                                                <li><i class="tji-list"></i>Priority customer support</li>
+                                                <li><i class="tji-list"></i>Up to 3 projects per month</li>
+                                                <li><i class="tji-list"></i>Monthly performance reviews</li>
+                                                <li><i class="tji-list"></i>Collaboration tools for team</li>
+                                                <li><i class="tji-list"></i>Custom templates</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="pricing-box wow fadeInUp" data-wow-delay=".9s">
+                                        <div class="pricing-header">
+                                            <h4 class="package-name">Premium Plan</h4>
+                                            <div class="package-desc">
+                                                <p>Advanced Business Services</p>
+                                            </div>
+                                            <div class="package-price">
+                                                <span class="package-currency">$</span>
+                                                <span class="price-number">499</span>
+                                                <span class="package-period">/per month</span>
+                                            </div>
+                                            <div class="pricing-btn">
+                                                <a class="text-btn" href="contact.html">
+                                                    <span class="btn-text"><span>Chose Plan</span></span>
+                                                    <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-items">
+                                            <ul>
+                                                <li><i class="tji-list"></i>All features in Standard Plan</li>
+                                                <li><i class="tji-list"></i>Dedicated account manager</li>
+                                                <li><i class="tji-list"></i>Tailored strategy sessions</li>
+                                                <li><i class="tji-list"></i>Quarterly performance audits</li>
+                                                <li><i class="tji-list"></i>Priority support</li>
+                                                <li><i class="tji-list"></i>24/7 emergency service</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="pricing-box wow fadeInUp" data-wow-delay=".9s">
-                                <div class="pricing-header">
-                                    <h4 class="package-name">Premium Plan</h4>
-                                    <div class="package-desc">
-                                        <p>Advanced Business Services</p>
-                                    </div>
-                                    <div class="package-price">
-                                        <span class="package-currency">$</span>
-                                        <span class="price-number">499</span>
-                                        <span class="package-period">/per month</span>
-                                    </div>
-                                    <div class="pricing-btn">
-                                        <a class="text-btn" href="contact.html">
-                                            <span class="btn-text"><span>Chose Plan</span></span>
-                                            <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="list-items">
-                                    <ul>
-                                        <li><i class="tji-list"></i>All features in Standard Plan</li>
-                                        <li><i class="tji-list"></i>Dedicated account manager</li>
-                                        <li><i class="tji-list"></i>Tailored strategy sessions</li>
-                                        <li><i class="tji-list"></i>Quarterly performance audits</li>
-                                        <li><i class="tji-list"></i>Priority support</li>
-                                        <li><i class="tji-list"></i>24/7 emergency service</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
+                    </section> -->
         <!-- end: Pricing Section -->
 
         <!-- start: Client Section -->
