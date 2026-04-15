@@ -32,17 +32,18 @@
                             </a>
                         </div>
                         <div class="footer-text">
-                            <p>Developing personalze our customer journeys to increase satisfaction & loyalty of our expansion.
+                            <p>Developing personalze our customer journeys to increase satisfaction & loyalty of our
+                                expansion.
                             </p>
                         </div>
-                        <div class="award-logo-area">
+                        <!-- <div class="award-logo-area">
                             <div class="award-logo">
                                 <img src="{{asset('frontend/assets/images/footer/award-logo-white-1.webp')}}" alt="">
                             </div>
                             <div class="award-logo">
                                 <img src="{{asset('frontend/assets/images/footer/award-logo-white-2.webp')}}" alt="">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6">
@@ -50,12 +51,12 @@
                         <h5 class="title">Services</h5>
                         <ul>
                             @foreach($header_services->take(5) as $fs)
-                            <li>
-                                <a href="{{ route('services.details', ['id' => $fs->id]) }}"
-                                   style="display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;">
-                                    {{ $fs->name }}
-                                </a>
-                            </li>
+                                <li>
+                                    <a href="{{ route('services.details', ['id' => $fs->id]) }}"
+                                        style="display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;">
+                                        {{ $fs->name }}
+                                    </a>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
@@ -77,14 +78,14 @@
                         <h5 class="title">Our Office</h5>
                         <div class="footer-contact-info">
                             <div class="contact-item">
-                                <span>993 Renner Burg, West Rond, MT 94251-030, USA.</span>
+                                <span>100 Whiteram Close Northeast, T1Y 5X8</span>
                             </div>
                             <div class="contact-item">
                                 <a href="tel:+14038300054">P: +1 (403) 830-0054</a>
                                 <a href="mailto:info@truenorthbuild.ca">M: info@truenorthbuild.ca</a>
                             </div>
                             <div class="contact-item">
-                                <span><i class="tji-clock"></i> Mon-Fri 10am-10pm</span>
+                                <span><i class="tji-clock"></i> Mon-Fri 08am-06pm</span>
                             </div>
                         </div>
                     </div>
@@ -98,37 +99,43 @@
                 <div class="swiper-slide marquee-item">
                     <h4 class="marquee-text">Growth</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp" alt="">
+                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp"
+                            alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
                     <h4 class="marquee-text">Leadership</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp" alt="">
+                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp"
+                            alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
                     <h4 class="marquee-text">Enterprise</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp" alt="">
+                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp"
+                            alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
                     <h4 class="marquee-text">Leadership</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp" alt="">
+                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp"
+                            alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
                     <h4 class="marquee-text">Enterprise</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp" alt="">
+                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp"
+                            alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
                     <h4 class="marquee-text">Leadership</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp" alt="">
+                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp"
+                            alt="">
                     </div>
                 </div>
             </div>
@@ -140,8 +147,8 @@
                 <div class="col-12">
                     <div class="copyright-content-area">
                         <div class="copyright-text">
-                            <p>&copy; <span>2026</span> <a href="{{ route('home') }}"
-                                    target="_blank">The North Build</a> All right reserved</p>
+                            <p>&copy; <span>2026</span> <a href="{{ route('home') }}" target="_blank">True North
+                                    Build</a> All right reserved</p>
                         </div>
                         <div class="social-links style-3">
                             <ul>
@@ -151,7 +158,8 @@
                                 <li><a href="https://www.instagram.com/" target="_blank"><i
                                             class="fa-brands fa-instagram"></i></a>
                                 </li>
-                                <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                </li>
                                 <li><a href="https://www.linkedin.com/" target="_blank"><i
                                             class="fa-brands fa-linkedin-in"></i></a>
                                 </li>
