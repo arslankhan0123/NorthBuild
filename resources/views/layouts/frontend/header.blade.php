@@ -61,11 +61,11 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <span class="subtitle">Phone</span>
-                        <a class="contact-link" href="tel:10095447818">+1 (009) 544-7818</a>
+                        <a class="contact-link" href="tel:+14038300054">+1 (403) 830-0054</a>
                     </div>
                     <div class="contact-item">
                         <span class="subtitle">Email</span>
-                        <a class="contact-link" href="mailto:info@bexon.com">info@bexon.com</a>
+                        <a class="contact-link" href="mailto:info@truenorthbuild.ca">info@truenorthbuild.ca</a>
                     </div>
                     <div class="contact-item">
                         <span class="subtitle">Location</span>
@@ -125,15 +125,15 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <span class="subtitle">Phone</span>
-                        <a class="contact-link" href="tel:8089091313">808-909-1313</a>
+                        <a class="contact-link" href="tel:+14038300054">+1 (403) 830-0054</a>
                     </div>
                     <div class="contact-item">
                         <span class="subtitle">Email</span>
-                        <a class="contact-link" href="mailto:info@bexon.com">info@bexon.com</a>
+                        <a class="contact-link" href="mailto:info@truenorthbuild.ca">info@truenorthbuild.ca</a>
                     </div>
                     <div class="contact-item">
                         <span class="subtitle">Location</span>
-                        <span class="contact-link">993 Renner Burg, West Rond, MT 94251-030</span>
+                        <span class="contact-link">100 Whiteram Close Northeast, T1Y 5X8</span>
                     </div>
                 </div>
             </div>
