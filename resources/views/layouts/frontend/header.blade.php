@@ -69,7 +69,7 @@
                     </div>
                     <div class="contact-item">
                         <span class="subtitle">Location</span>
-                        <span class="contact-link">993 Renner Burg, West Rond, MT 94251-030</span>
+                        <span class="contact-link">100 Whiteram Close Northeast, T1Y 5X8</span>
                     </div>
                 </div>
             </div>
