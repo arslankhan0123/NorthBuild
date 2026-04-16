@@ -500,9 +500,9 @@
         <section class="tj-testimonial-section-2 section-gap">
             <div class="container">
                 <div class="row row-gap-3">
-                    <div class="col-lg-6">
-                        <div class="testimonial-img-area wow fadeInUp" data-wow-delay=".3s">
-                            <div class="testimonial-img">
+                    <div class="col-lg-6 d-flex">
+                        <div class="testimonial-img-area wow fadeInUp h-100 w-100" data-wow-delay=".3s">
+                            <div class="testimonial-img h-100">
                                 <img data-speed=".8"
                                     src="{{asset('9.jpg')}}"
                                     alt="">
@@ -528,12 +528,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial-wrapper wow fadeInUp" data-wow-delay=".5s">
-                            <div class="swiper testimonial-slider-2">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
+                    <div class="col-lg-6 d-flex">
+                        <div class="testimonial-wrapper wow fadeInUp h-100 w-100" data-wow-delay=".5s">
+                            <div class="swiper testimonial-slider-2 h-100">
+                                <div class="swiper-wrapper h-100">
+                                    <div class="swiper-slide h-100">
+                                        <div class="testimonial-item h-100">
                                             <span class="quote-icon"><i class="tji-quote"></i></span>
                                             <div class="desc">
                                                 <p>North Build did an amazing job on our landscaping project. The team was
@@ -555,8 +555,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
+                                    <div class="swiper-slide h-100">
+                                        <div class="testimonial-item h-100">
                                             <span class="quote-icon"><i class="tji-quote"></i></span>
                                             <div class="desc">
                                                 <p>We hired North Build for fencing and concrete work, and the results were
@@ -578,8 +578,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
+                                    <div class="swiper-slide h-100">
+                                        <div class="testimonial-item h-100">
                                             <span class="quote-icon"><i class="tji-quote"></i></span>
                                             <div class="desc">
                                                 <p>Excellent experience with North Build! They handled our property cleanup
