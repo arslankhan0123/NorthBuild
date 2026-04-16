@@ -23,7 +23,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide tj-slider-item">
                         <div class="slider-bg-image"
-                            data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-1.webp">
+                            data-bg-image="{{asset('1.jpg')}}">
                         </div>
                         <div class="container">
                             <div class="slider-wrapper">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="swiper-slide tj-slider-item">
                         <div class="slider-bg-image"
-                            data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-2.webp">
+                            data-bg-image="{{asset('4.jpg')}}">
                         </div>
                         <div class="container">
                             <div class="slider-wrapper">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="swiper-slide tj-slider-item">
                         <div class="slider-bg-image"
-                            data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-3.webp">
+                            data-bg-image="{{asset('7.jpg')}}">
                         </div>
                         <div class="container">
                             <div class="slider-wrapper">
@@ -101,15 +101,15 @@
             <div class="swiper hero-thumb wow fadeIn" data-wow-delay="2s">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide thumb-item">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-thumb-1.webp"
+                        <img src="{{asset('1.jpg')}}"
                             alt="Thumbnail">
                     </div>
                     <div class="swiper-slide thumb-item">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-thumb-2.webp"
+                        <img src="{{asset('4.jpg')}}"
                             alt="Thumbnail">
                     </div>
                     <div class="swiper-slide thumb-item">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-thumb-3.webp"
+                        <img src="{{asset('7.jpg')}}"
                             alt="Thumbnail">
                     </div>
                 </div>
@@ -210,20 +210,20 @@
                                 </div>
                             </div>
                             <div class="video-img wow fadeInRight" data-wow-delay=".7s">
-                                <img src="https://themejunction.net/html/bexon/demo/assets/images/about/about-3.webp"
+                                <img src="{{asset('6.jpg')}}"
                                     alt="Image">
-                                <a class="video-btn video-popup" data-autoplay="true" data-vbtype="video"
+                                <!-- <a class="video-btn video-popup" data-autoplay="true" data-vbtype="video"
                                     data-maxwidth="1200px"
                                     href="https://www.youtube.com/watch?v=MLpWrANjFbI&amp;ab_channel=eidelchteinadvogados">
                                     <span><i class="tji-play"></i></span>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 order-lg-3 order-2">
                         <div class="customers-box style-2 wow fadeInUp" data-wow-delay=".3s">
                             <div class="customers-bg"
-                                data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/about/about-4.webp">
+                                data-bg-image="{{asset('6.jpg')}}">
                             </div>
                             <div class="customers">
                                 <ul>
@@ -500,11 +500,11 @@
         <section class="tj-testimonial-section-2 section-gap">
             <div class="container">
                 <div class="row row-gap-3">
-                    <div class="col-lg-6">
-                        <div class="testimonial-img-area wow fadeInUp" data-wow-delay=".3s">
-                            <div class="testimonial-img">
+                    <div class="col-lg-6 d-flex">
+                        <div class="testimonial-img-area wow fadeInUp h-100 w-100" data-wow-delay=".3s">
+                            <div class="testimonial-img h-100">
                                 <img data-speed=".8"
-                                    src="https://themejunction.net/html/bexon/demo/assets/images/testimonial/testimonial-img.webp"
+                                    src="{{asset('9.jpg')}}"
                                     alt="">
                                 <div class="sec-heading style-2">
                                     <h2 class="sec-title text-anim">Hear from Our <span>Customer.</span></h2>
@@ -528,12 +528,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial-wrapper wow fadeInUp" data-wow-delay=".5s">
-                            <div class="swiper testimonial-slider-2">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
+                    <div class="col-lg-6 d-flex">
+                        <div class="testimonial-wrapper wow fadeInUp h-100 w-100" data-wow-delay=".5s">
+                            <div class="swiper testimonial-slider-2 h-100">
+                                <div class="swiper-wrapper h-100">
+                                    <div class="swiper-slide h-100">
+                                        <div class="testimonial-item h-100">
                                             <span class="quote-icon"><i class="tji-quote"></i></span>
                                             <div class="desc">
                                                 <p>North Build did an amazing job on our landscaping project. The team was
@@ -555,8 +555,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
+                                    <div class="swiper-slide h-100">
+                                        <div class="testimonial-item h-100">
                                             <span class="quote-icon"><i class="tji-quote"></i></span>
                                             <div class="desc">
                                                 <p>We hired North Build for fencing and concrete work, and the results were
@@ -578,8 +578,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
+                                    <div class="swiper-slide h-100">
+                                        <div class="testimonial-item h-100">
                                             <span class="quote-icon"><i class="tji-quote"></i></span>
                                             <div class="desc">
                                                 <p>Excellent experience with North Build! They handled our property cleanup

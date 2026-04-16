@@ -22,7 +22,7 @@
         <div class="space-for-header"></div>
         <!-- start: Breadcrumb Section -->
         <section class="tj-page-header section-gap-x"
-            data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/bg/pheader-bg.webp">
+            data-bg-image="{{asset('6.jpg')}}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

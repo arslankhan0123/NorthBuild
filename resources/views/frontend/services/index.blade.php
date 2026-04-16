@@ -12,7 +12,8 @@
 
             const logo = document.querySelector(".logo img");
             if (logo) {
-                logo.src = "{{ asset('frontend/assets/images/logos/logo.webp') }}";
+                logo.src = "{{asset('logo.png')}}";
+                // logo.src = "{{ asset('frontend/assets/images/logos/logo.webp') }}";
             }
         });
     </script>
@@ -20,7 +21,7 @@
         <div class="space-for-header"></div>
         <!-- start: Breadcrumb Section -->
         <section class="tj-page-header section-gap-x"
-            data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/bg/pheader-bg.webp">
+            data-bg-image="{{asset('6.jpg')}}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
