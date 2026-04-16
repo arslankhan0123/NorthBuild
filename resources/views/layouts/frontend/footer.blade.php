@@ -97,44 +97,44 @@
         <div class="swiper marquee-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide marquee-item">
-                    <h4 class="marquee-text">Growth</h4>
+                    <h4 class="marquee-text">Grading</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp"
+                        <img src="{{asset('6.jpg')}}"
                             alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
-                    <h4 class="marquee-text">Leadership</h4>
+                    <h4 class="marquee-text">Landscape Maintenance</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp"
+                        <img src="{{asset('6.jpg')}}"
                             alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
-                    <h4 class="marquee-text">Enterprise</h4>
+                    <h4 class="marquee-text">Concrete Work</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp"
+                        <img src="{{asset('4.jpg')}}"
                             alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
-                    <h4 class="marquee-text">Leadership</h4>
+                    <h4 class="marquee-text">Grading</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp"
+                        <img src="{{asset('6.jpg')}}"
                             alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
-                    <h4 class="marquee-text">Enterprise</h4>
+                    <h4 class="marquee-text">Landscape Maintenance</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-1.webp"
+                        <img src="{{asset('2.jpg')}}"
                             alt="">
                     </div>
                 </div>
                 <div class="swiper-slide marquee-item">
-                    <h4 class="marquee-text">Leadership</h4>
+                    <h4 class="marquee-text">Grading</h4>
                     <div class="marquee-img">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/marquee/marquee-2.webp"
+                        <img src="{{asset('8.jpg')}}"
                             alt="">
                     </div>
                 </div>

@@ -23,7 +23,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide tj-slider-item">
                         <div class="slider-bg-image"
-                            data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-1.webp">
+                            data-bg-image="{{asset('1.jpg')}}">
                         </div>
                         <div class="container">
                             <div class="slider-wrapper">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="swiper-slide tj-slider-item">
                         <div class="slider-bg-image"
-                            data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-2.webp">
+                            data-bg-image="{{asset('4.jpg')}}">
                         </div>
                         <div class="container">
                             <div class="slider-wrapper">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="swiper-slide tj-slider-item">
                         <div class="slider-bg-image"
-                            data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-3.webp">
+                            data-bg-image="{{asset('7.jpg')}}">
                         </div>
                         <div class="container">
                             <div class="slider-wrapper">
@@ -101,15 +101,15 @@
             <div class="swiper hero-thumb wow fadeIn" data-wow-delay="2s">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide thumb-item">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-thumb-1.webp"
+                        <img src="{{asset('1.jpg')}}"
                             alt="Thumbnail">
                     </div>
                     <div class="swiper-slide thumb-item">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-thumb-2.webp"
+                        <img src="{{asset('4.jpg')}}"
                             alt="Thumbnail">
                     </div>
                     <div class="swiper-slide thumb-item">
-                        <img src="https://themejunction.net/html/bexon/demo/assets/images/hero/slider-thumb-3.webp"
+                        <img src="{{asset('7.jpg')}}"
                             alt="Thumbnail">
                     </div>
                 </div>
@@ -210,20 +210,20 @@
                                 </div>
                             </div>
                             <div class="video-img wow fadeInRight" data-wow-delay=".7s">
-                                <img src="https://themejunction.net/html/bexon/demo/assets/images/about/about-3.webp"
+                                <img src="{{asset('6.jpg')}}"
                                     alt="Image">
-                                <a class="video-btn video-popup" data-autoplay="true" data-vbtype="video"
+                                <!-- <a class="video-btn video-popup" data-autoplay="true" data-vbtype="video"
                                     data-maxwidth="1200px"
                                     href="https://www.youtube.com/watch?v=MLpWrANjFbI&amp;ab_channel=eidelchteinadvogados">
                                     <span><i class="tji-play"></i></span>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 order-lg-3 order-2">
                         <div class="customers-box style-2 wow fadeInUp" data-wow-delay=".3s">
                             <div class="customers-bg"
-                                data-bg-image="https://themejunction.net/html/bexon/demo/assets/images/about/about-4.webp">
+                                data-bg-image="{{asset('6.jpg')}}">
                             </div>
                             <div class="customers">
                                 <ul>
@@ -504,7 +504,7 @@
                         <div class="testimonial-img-area wow fadeInUp" data-wow-delay=".3s">
                             <div class="testimonial-img">
                                 <img data-speed=".8"
-                                    src="https://themejunction.net/html/bexon/demo/assets/images/testimonial/testimonial-img.webp"
+                                    src="{{asset('9.jpg')}}"
                                     alt="">
                                 <div class="sec-heading style-2">
                                     <h2 class="sec-title text-anim">Hear from Our <span>Customer.</span></h2>
