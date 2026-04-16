@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactSubmissionMail;
 
 class ContactController extends Controller
 {
@@ -17,13 +19,21 @@ class ContactController extends Controller
             'conMessage' => 'required|string',
         ]);
 
-        Contact::create([
+        $contact = Contact::create([
             'name' => $validated['conName'],
             'email' => $validated['conEmail'],
             'phone' => $validated['conPhone'],
             'subject' => $validated['conSubject'],
             'message' => $validated['conMessage'],
         ]);
+
+        // Send email to info@truenorthbuild.ca
+        try {
+            Mail::to('info@truenorthbuild.ca')->send(new ContactSubmissionMail($contact));
+        } catch (\Exception $e) {
+            // Log the error or handle it as needed
+            \Log::error('Mail sending failed: ' . $e->getMessage());
+        }
 
         return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }

@@ -142,6 +142,59 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contact-form wow fadeInUp" data-wow-delay=".1s">
+                            <style>
+                                .dots-loader {
+                                    display: none;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 6px;
+                                }
+
+                                .dots-loader div {
+                                    width: 12px;
+                                    height: 12px;
+                                    background-color: #ffffff;
+                                    border-radius: 50%;
+                                    animation: dots-loading 1.4s infinite ease-in-out both;
+                                }
+
+                                .dots-loader div:nth-child(1) {
+                                    animation-delay: -0.32s;
+                                }
+
+                                .dots-loader div:nth-child(2) {
+                                    animation-delay: -0.16s;
+                                }
+
+                                @keyframes dots-loading {
+
+                                    0%,
+                                    80%,
+                                    100% {
+                                        transform: scale(0);
+                                        opacity: 0.3;
+                                    }
+
+                                    40% {
+                                        transform: scale(1.0);
+                                        opacity: 1;
+                                    }
+                                }
+
+                                button:disabled .dots-loader {
+                                    display: flex;
+                                }
+
+                                button:disabled .btn-text,
+                                button:disabled .btn-icon {
+                                    display: none !important;
+                                }
+
+                                .tj-primary-btn:disabled {
+                                    cursor: not-allowed;
+                                    opacity: 0.8;
+                                }
+                            </style>
                             <h3 class="title">Feel Free to Get in Touch or Visit our Location.</h3>
                             <form id="contact-form" action="{{ route('contact.store') }}" method="POST">
                                 @csrf
@@ -172,14 +225,10 @@
                                             <div class="tj-nice-select-box">
                                                 <div class="tj-select">
                                                     <select name="conSubject">
-                                                        <option value="">Chose a option</option>
-                                                        <option value="Business Strategy" {{ old('conSubject') == 'Business Strategy' ? 'selected' : '' }}>Business Strategy</option>
-                                                        <option value="Customer Experience" {{ old('conSubject') == 'Customer Experience' ? 'selected' : '' }}>Customer Experience</option>
-                                                        <option value="Sustainability and ESG" {{ old('conSubject') == 'Sustainability and ESG' ? 'selected' : '' }}>Sustainability and ESG</option>
-                                                        <option value="Training and Development" {{ old('conSubject') == 'Training and Development' ? 'selected' : '' }}>Training and Development</option>
-                                                        <option value="IT Support & Maintenance" {{ old('conSubject') == 'IT Support & Maintenance' ? 'selected' : '' }}>IT Support &
-                                                            Maintenance</option>
-                                                        <option value="Marketing Strategy" {{ old('conSubject') == 'Marketing Strategy' ? 'selected' : '' }}>Marketing Strategy</option>
+                                                        <option value="">Choose a service</option>
+                                                        @foreach($services as $service)
+                                                            <option value="{{ $service->name }}" {{ old('conSubject') == $service->name ? 'selected' : '' }}>{{ $service->name }}</option>
+                                                        @endforeach
                                                     </select>
                                                     @error('conSubject') <small class="text-danger">{{ $message }}</small>
                                                     @enderror
@@ -195,13 +244,31 @@
                                         </div>
                                     </div>
                                     <div class="submit-btn">
-                                        <button class="tj-primary-btn" type="submit">
+                                        <button class="tj-primary-btn" type="submit" id="submit-btn">
                                             <span class="btn-text"><span>Submit Now</span></span>
                                             <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                                            <div class="dots-loader">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
                                         </button>
                                     </div>
                                 </div>
                             </form>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const contactForm = document.getElementById('contact-form');
+                                    if (contactForm) {
+                                        contactForm.addEventListener('submit', function() {
+                                            const btn = document.getElementById('submit-btn');
+                                            if (btn) {
+                                                btn.disabled = true;
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
                     <div class="col-lg-6">

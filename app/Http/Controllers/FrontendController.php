@@ -33,7 +33,8 @@ class FrontendController extends Controller
 
     public function contact()
     {
-        return view('frontend.contact.index');
+        $services = Service::where('status', 'active')->latest()->get();
+        return view('frontend.contact.index', compact('services'));
     }
 
     public function services()

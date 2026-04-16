@@ -29404,4 +29404,17 @@ START: Service CSS
   }
 }
 
+.nice-select .list {
+  max-height: 280px;
+  overflow-y: auto !important;
+  width: 100% !important;
+}
+
+.nice-select .option {
+  white-space: normal !important;
+  line-height: 1.4 !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
 /* !END: Case Study CSS *//*# sourceMappingURL=main.css.map */
