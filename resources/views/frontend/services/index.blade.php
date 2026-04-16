@@ -140,6 +140,59 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="contact-form style-2 wow fadeInUp" data-wow-delay=".4s">
+                            <style>
+                                .dots-loader {
+                                    display: none;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 6px;
+                                }
+
+                                .dots-loader div {
+                                    width: 12px;
+                                    height: 12px;
+                                    background-color: #ffffff;
+                                    border-radius: 50%;
+                                    animation: dots-loading 1.4s infinite ease-in-out both;
+                                }
+
+                                .dots-loader div:nth-child(1) {
+                                    animation-delay: -0.32s;
+                                }
+
+                                .dots-loader div:nth-child(2) {
+                                    animation-delay: -0.16s;
+                                }
+
+                                @keyframes dots-loading {
+
+                                    0%,
+                                    80%,
+                                    100% {
+                                        transform: scale(0);
+                                        opacity: 0.3;
+                                    }
+
+                                    40% {
+                                        transform: scale(1.0);
+                                        opacity: 1;
+                                    }
+                                }
+
+                                button:disabled .dots-loader {
+                                    display: flex;
+                                }
+
+                                button:disabled .btn-text,
+                                button:disabled .btn-icon {
+                                    display: none !important;
+                                }
+
+                                .tj-primary-btn:disabled {
+                                    cursor: not-allowed;
+                                    opacity: 0.8;
+                                }
+                            </style>
                             <div class="sec-heading">
                                 <span class="sub-title text-white"><i class="tji-box"></i>Get in Touch</span>
                                 <h2 class="sec-title title-anim">Drop Us a <span>Line.</span></h2>
@@ -167,9 +220,9 @@
                                             <div class="tj-nice-select-box">
                                                 <div class="tj-select">
                                                     <select name="conSubject">
-                                                        <option value="">Chose a option</option>
+                                                        <option value="">Choose a service</option>
                                                         @foreach($services as $service)
-                                                            <option value="{{ $service->name }}">{{ $service->name }}</option>
+                                                            <option value="{{ $service->name }}" {{ old('conSubject') == $service->name ? 'selected' : '' }}>{{ $service->name }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -183,13 +236,31 @@
                                         </div>
                                     </div>
                                     <div class="submit-btn">
-                                        <button class="tj-primary-btn" type="submit">
+                                        <button class="tj-primary-btn" type="submit" id="submit-btn-2">
                                             <span class="btn-text"><span>Send Message</span></span>
                                             <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                                            <div class="dots-loader">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
                                         </button>
                                     </div>
                                 </div>
                             </form>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const serviceForm = document.getElementById('contact-form-2');
+                                    if (serviceForm) {
+                                        serviceForm.addEventListener('submit', function() {
+                                            const btn = document.getElementById('submit-btn-2');
+                                            if (btn) {
+                                                btn.disabled = true;
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>

@@ -1976,3 +1976,4 @@ Progressbar js
 		}
 	}
 })(jQuery);
+
